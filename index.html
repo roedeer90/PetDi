@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PetDì — Your pet's health record, day by day</title>
 <meta name="description" content="PetDì is the digital health record for your dog or cat: vaccines, treatments, check-ups and reminders — all on your iPhone, day by day. Private by design.">
-<meta property="og:title" content="PetDì — Your pet's health record, day by day">
-<meta property="og:description" content="Vaccines, treatments, check-ups and reminders for your dog or cat, all on your iPhone. Private by design.">
-<meta property="og:type" content="website">
 <link rel="icon" href="assets/icon-light.png">
 <link rel="apple-touch-icon" href="assets/icon-light.png">
+<script>try{var t=localStorage.getItem('petdi_theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,33 +15,31 @@
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top"><img src="assets/icon-light.png" alt="PetDì icon">PetDì</a>
-    <nav class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#look">Screenshots</a>
-      <a href="privacy.html">Privacy</a>
-      <a class="pill" href="#top">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M16.5 3c-1.3 0-2.6.8-3.4 1.9-.7 1-1.3 2.5-1.1 3.9 1.4.1 2.8-.7 3.6-1.8.8-1 1.3-2.4 1-4zM19 16.9c-.6 1.4-1.4 2.7-2.5 3.9-.8.8-1.7 1.7-2.9 1.7-1.1 0-1.5-.7-2.8-.7s-1.7.7-2.8.7c-1.2 0-2.1-.9-2.9-1.8-2.2-2.5-3.9-7.1-1.6-10.3.8-1.1 2.1-1.8 3.5-1.8 1.2 0 2 .8 3 .8s1.6-.8 3-.8c1.1 0 2.3.3 3.2 1.2-2.8 1.6-2.4 5.5.1 6.9z"/></svg>
-        App Store
-      </a>
-    </nav>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#look" data-i18n="nav.shots">Screenshots</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+      </nav>
+      <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle light or dark theme"></button>
+      <div class="lang-switch"><button data-l="it" onclick="setLang('it')">IT</button><button data-l="en" onclick="setLang('en')">EN</button></div>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap">
     <div class="hero-copy">
-      <div class="eyebrow">Digital pet health record</div>
-      <h1>The health record your dog or cat <span class="tint">deserves.</span></h1>
-      <p class="lead">Vaccines, treatments, check-ups and reminders — everything about your pet's health, in your pocket and up to date.</p>
+      <div class="eyebrow" data-i18n="hero.eyebrow">Digital pet health record</div>
+      <h1 data-i18n="hero.h1">The health record your dog or cat <span class="tint">deserves.</span></h1>
+      <p class="lead" data-i18n="hero.lead">Vaccines, treatments, check-ups and reminders — everything about your pet's health, in your pocket and up to date.</p>
       <div class="hero-cta">
         <a class="store-badge" href="#look">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M16.5 3c-1.3 0-2.6.8-3.4 1.9-.7 1-1.3 2.5-1.1 3.9 1.4.1 2.8-.7 3.6-1.8.8-1 1.3-2.4 1-4zM19 16.9c-.6 1.4-1.4 2.7-2.5 3.9-.8.8-1.7 1.7-2.9 1.7-1.1 0-1.5-.7-2.8-.7s-1.7.7-2.8.7c-1.2 0-2.1-.9-2.9-1.8-2.2-2.5-3.9-7.1-1.6-10.3.8-1.1 2.1-1.8 3.5-1.8 1.2 0 2 .8 3 .8s1.6-.8 3-.8c1.1 0 2.3.3 3.2 1.2-2.8 1.6-2.4 5.5.1 6.9z"/></svg>
-          <span><small>Coming soon to the</small><b>App Store</b></span>
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.543 12.75c-.024-2.148 1.757-3.178 1.838-3.229-1.001-1.465-2.559-1.665-3.115-1.688-1.327-.134-2.588.781-3.261.781-.669 0-1.708-.761-2.808-.741-1.446.021-2.78.84-3.523 2.134-1.502 2.606-.384 6.459 1.078 8.573.714 1.035 1.565 2.196 2.681 2.155 1.076-.043 1.483-.696 2.783-.696 1.299 0 1.666.696 2.805.675 1.157-.02 1.891-1.055 2.601-2.093.818-1.199 1.156-2.361 1.176-2.421-.026-.012-2.258-.867-2.281-3.438zM15.4 6.505c.593-.719.993-1.717.884-2.71-.854.035-1.888.569-2.501 1.287-.55.637-1.031 1.653-.902 2.627.953.074 1.926-.485 2.519-1.204z"/></svg>
+          <span><small data-i18n="hero.badge_small">Coming soon to the</small><b data-i18n="hero.badge_big">App Store</b></span>
         </a>
         <div class="dotrow"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </div>
@@ -51,95 +47,84 @@
     <div class="hero-visual">
       <div class="blob"></div>
       <div class="dotgrid" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="phone"><img src="assets/home.png" alt="PetDì Today screen showing a pet's health summary"></div>
+      <div class="phone"><img src="assets/home.jpg" alt="PetDì Today screen"></div>
     </div>
   </div>
 </section>
 
-<!-- PITCH -->
 <section class="pitch">
   <div class="wrap">
-    <div class="eyebrow">Say goodbye to paper</div>
-    <h2>Your paper booklet is torn, faded, and never around when the vet asks.</h2>
-    <p>PetDì keeps every vaccine, treatment and check-up in one tidy place — and nudges you <span class="tint">before</span> anything expires. No more digging through drawers or guessing when the next shot is due.</p>
+    <div class="eyebrow" data-i18n="pitch.eyebrow">Say goodbye to paper</div>
+    <h2 data-i18n="pitch.h2">Your paper booklet is torn, faded, and never around when the vet asks.</h2>
+    <p data-i18n="pitch.p">PetDì keeps every vaccine, treatment and check-up in one tidy place — and nudges you <span class="tint">before</span> anything expires. No more digging through drawers or guessing when the next shot is due.</p>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="section" id="features">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Everything in one place</div>
-      <h2>Built around your pet's day&#8209;to&#8209;day</h2>
-      <p>The small things that keep an animal healthy, finally easy to track and impossible to forget.</p>
+      <div class="eyebrow" data-i18n="feat.eyebrow">Everything in one place</div>
+      <h2 data-i18n="feat.h2">Built around your pet's day&#8209;to&#8209;day</h2>
+      <p data-i18n="feat.p">The small things that keep an animal healthy, finally easy to track and impossible to forget.</p>
     </div>
     <div class="grid">
-
       <div class="card">
         <div class="ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="20" cy="18" r="1.4" fill="currentColor" stroke="none"/></svg></div>
-        <h3>Full health record</h3>
-        <p>Vaccines, boosters, antiparasitics, deworming and check-ups — each with dates, batch numbers and notes.</p>
+        <h3 data-i18n="f1.h">Full health record</h3>
+        <p data-i18n="f1.p">Vaccines, boosters, antiparasitics, deworming and check-ups — each with dates, batch numbers and notes.</p>
       </div>
-
       <div class="card">
         <div class="ic violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
-        <h3>Smart reminders</h3>
-        <p>Automatic alerts before every due date, so a vaccine or treatment never slips your mind again.</p>
+        <h3 data-i18n="f2.h">Smart reminders</h3>
+        <p data-i18n="f2.p">Automatic alerts before every due date, so a vaccine or treatment never slips your mind again.</p>
       </div>
-
       <div class="card">
         <div class="ic blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5v14M7.5 5v14M11 5v14M14 5v14M17.5 5v14M21 5v14" opacity=".9"/></svg></div>
-        <h3>Microchip on hand</h3>
-        <p>Your pet's microchip as a QR and barcode, ready to show the vet or shelter in a single tap.</p>
+        <h3 data-i18n="f3.h">Microchip on hand</h3>
+        <p data-i18n="f3.p">Your pet's microchip as a QR and barcode, ready to show the vet or shelter in a single tap.</p>
       </div>
-
       <div class="card">
         <div class="ic orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></div>
-        <h3>Weight, temp &amp; more</h3>
-        <p>Log weight, temperature and blood pressure at each visit, and watch the history build over time.</p>
+        <h3 data-i18n="f4.h">Weight, temp &amp; more</h3>
+        <p data-i18n="f4.p">Log weight, temperature and blood pressure at each visit, and watch the history build over time.</p>
       </div>
-
       <div class="card">
         <div class="ic sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="8" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="18" cy="8" r="2"/><path d="M8.5 16c0-2.5 1.6-4 3.5-4s3.5 1.5 3.5 4c0 1.7-1.6 2-3.5 2s-3.5-.3-3.5-2z"/></svg></div>
-        <h3>Vet &amp; clinic close by</h3>
-        <p>Save vet and clinic contacts with one-tap call and map, plus reference values for dogs and cats.</p>
+        <h3 data-i18n="f5.h">Vet &amp; clinic close by</h3>
+        <p data-i18n="f5.p">Save vet and clinic contacts with one-tap call and map, plus reference values for dogs and cats.</p>
       </div>
-
       <div class="card">
         <div class="ic red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-        <h3>Private by design</h3>
-        <p>Everything stays on your iPhone. No account, no tracking, no servers. Your pet's record is yours alone.</p>
+        <h3 data-i18n="f6.h">Private by design</h3>
+        <p data-i18n="f6.p">Everything stays on your iPhone. No account, no tracking, no servers. Your pet's record is yours alone.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- SHOWCASE -->
 <section class="showcase" id="look">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">A closer look</div>
-      <h2>Clean, calm, and truly native</h2>
-      <p>Designed to feel right at home on iOS — in light and dark, and in seven languages.</p>
+      <div class="eyebrow" data-i18n="show.eyebrow">A closer look</div>
+      <h2 data-i18n="show.h2">Clean, calm, and truly native</h2>
+      <p data-i18n="show.p">Designed to feel right at home on iOS — in light and dark, and in seven languages.</p>
     </div>
     <div class="shots">
-      <div class="phone lift"><img src="assets/record.png" alt="Health record list with vaccines and batch numbers"></div>
-      <div class="phone"><img src="assets/due.png" alt="Due dates screen with overdue and scheduled reminders"></div>
-      <div class="phone lift"><img src="assets/profile.png" alt="Pet profile with details and photo"></div>
+      <div class="phone lift"><img src="assets/record.jpg" alt="Health record"></div>
+      <div class="phone"><img src="assets/due.jpg" alt="Due dates"></div>
+      <div class="phone lift"><img src="assets/profile.jpg" alt="Pet profile"></div>
     </div>
   </div>
 </section>
 
-<!-- PRIVACY BAND -->
 <section class="privacy-band">
   <div class="wrap">
     <div class="pb-inner">
       <div>
-        <div class="eyebrow">Your privacy</div>
-        <h2>Nothing leaves your device.</h2>
-        <p>PetDì collects no data, requires no sign-up and talks to no server. Read exactly how your information is handled — and how it isn't.</p>
-        <a class="btn-ghost" href="privacy.html">Read the privacy policy →</a>
+        <div class="eyebrow" data-i18n="priv.eyebrow">Your privacy</div>
+        <h2 data-i18n="priv.h2">Nothing leaves your device.</h2>
+        <p data-i18n="priv.p">PetDì collects no data, requires no sign-up and talks to no server. Read exactly how your information is handled — and how it isn't.</p>
+        <a class="btn-ghost" href="privacy.html" data-i18n="priv.btn">Read the privacy policy →</a>
       </div>
       <div class="pb-lock">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.4"/><path d="M12 16.9v1.6"/></svg>
@@ -148,33 +133,114 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot">
       <div>
         <a class="brand" href="#top"><img src="assets/icon-light.png" alt="PetDì icon">PetDì</a>
-        <p>The health record your dog or cat deserves — vaccines, reminders and more, day by day.</p>
+        <p data-i18n="foot.tagline">The health record your dog or cat deserves — vaccines, reminders and more, day by day.</p>
       </div>
       <div class="foot-links">
         <div>
-          <h4>App</h4>
-          <a href="#features">Features</a>
-          <a href="#look">Screenshots</a>
-          <a href="privacy.html">Privacy policy</a>
+          <h4 data-i18n="foot.app">App</h4>
+          <a href="#features" data-i18n="foot.features">Features</a>
+          <a href="#look" data-i18n="foot.shots">Screenshots</a>
+          <a href="privacy.html" data-i18n="foot.privacy">Privacy policy</a>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4 data-i18n="foot.contact">Contact</h4>
           <a href="mailto:hello@petdi.app">hello@petdi.app</a>
         </div>
       </div>
     </div>
     <div class="copyright">
-      <span>© 2026 PetDì. Made with 🐾 for pets and their humans.</span>
-      <span>Not a medical device. For record-keeping only.</span>
+      <span data-i18n="foot.copy">© 2026 PetDì. Made with 🐾 for pets and their humans.</span>
+      <span data-i18n="foot.note">Not a medical device. For record-keeping only.</span>
     </div>
   </div>
 </footer>
 
+<script>
+const I18N = {
+  en:{
+    "nav.features":"Features","nav.shots":"Screenshots","nav.privacy":"Privacy",
+    "hero.eyebrow":"Digital pet health record",
+    "hero.h1":"The health record your dog or cat <span class=\"tint\">deserves.</span>",
+    "hero.lead":"Vaccines, treatments, check-ups and reminders — everything about your pet's health, in your pocket and up to date.",
+    "hero.badge_small":"Coming soon to the","hero.badge_big":"App Store",
+    "pitch.eyebrow":"Say goodbye to paper",
+    "pitch.h2":"Your paper booklet is torn, faded, and never around when the vet asks.",
+    "pitch.p":"PetDì keeps every vaccine, treatment and check-up in one tidy place — and nudges you <span class=\"tint\">before</span> anything expires. No more digging through drawers or guessing when the next shot is due.",
+    "feat.eyebrow":"Everything in one place","feat.h2":"Built around your pet's day&#8209;to&#8209;day",
+    "feat.p":"The small things that keep an animal healthy, finally easy to track and impossible to forget.",
+    "f1.h":"Full health record","f1.p":"Vaccines, boosters, antiparasitics, deworming and check-ups — each with dates, batch numbers and notes.",
+    "f2.h":"Smart reminders","f2.p":"Automatic alerts before every due date, so a vaccine or treatment never slips your mind again.",
+    "f3.h":"Microchip on hand","f3.p":"Your pet's microchip as a QR and barcode, ready to show the vet or shelter in a single tap.",
+    "f4.h":"Weight, temp &amp; more","f4.p":"Log weight, temperature and blood pressure at each visit, and watch the history build over time.",
+    "f5.h":"Vet &amp; clinic close by","f5.p":"Save vet and clinic contacts with one-tap call and map, plus reference values for dogs and cats.",
+    "f6.h":"Private by design","f6.p":"Everything stays on your iPhone. No account, no tracking, no servers. Your pet's record is yours alone.",
+    "show.eyebrow":"A closer look","show.h2":"Clean, calm, and truly native",
+    "show.p":"Designed to feel right at home on iOS — in light and dark, and in seven languages.",
+    "priv.eyebrow":"Your privacy","priv.h2":"Nothing leaves your device.",
+    "priv.p":"PetDì collects no data, requires no sign-up and talks to no server. Read exactly how your information is handled — and how it isn't.",
+    "priv.btn":"Read the privacy policy →",
+    "foot.tagline":"The health record your dog or cat deserves — vaccines, reminders and more, day by day.",
+    "foot.app":"App","foot.features":"Features","foot.shots":"Screenshots","foot.privacy":"Privacy policy","foot.contact":"Contact",
+    "foot.copy":"© 2026 PetDì. Made with 🐾 for pets and their humans.","foot.note":"Not a medical device. For record-keeping only."
+  },
+  it:{
+    "nav.features":"Funzioni","nav.shots":"Schermate","nav.privacy":"Privacy",
+    "hero.eyebrow":"Libretto sanitario digitale",
+    "hero.h1":"Il libretto che il tuo cane o gatto <span class=\"tint\">merita.</span>",
+    "hero.lead":"Vaccini, trattamenti, controlli e promemoria — tutta la salute del tuo animale, in tasca e sempre aggiornata.",
+    "hero.badge_small":"Presto su","hero.badge_big":"App Store",
+    "pitch.eyebrow":"Addio alla carta",
+    "pitch.h2":"Il tuo libretto di carta è strappato, sbiadito e non si trova mai quando serve.",
+    "pitch.p":"PetDì tiene ogni vaccino, trattamento e controllo in un unico posto ordinato — e ti avvisa <span class=\"tint\">prima</span> che scada qualcosa. Basta frugare nei cassetti o tirare a indovinare quando tocca il prossimo richiamo.",
+    "feat.eyebrow":"Tutto in un unico posto","feat.h2":"Pensato per la vita quotidiana del tuo pet",
+    "feat.p":"Le piccole cose che tengono in salute un animale, finalmente facili da segnare e impossibili da dimenticare.",
+    "f1.h":"Libretto completo","f1.p":"Vaccini, richiami, antiparassitari, sverminazioni e controlli — ognuno con date, numeri di lotto e note.",
+    "f2.h":"Promemoria intelligenti","f2.p":"Avvisi automatici prima di ogni scadenza, così un vaccino o un trattamento non ti sfugge più.",
+    "f3.h":"Microchip a portata","f3.p":"Il microchip del tuo animale come QR e codice a barre, pronto da mostrare al veterinario o al canile con un tocco.",
+    "f4.h":"Peso, temperatura e altro","f4.p":"Registra peso, temperatura e pressione a ogni visita e guarda crescere lo storico nel tempo.",
+    "f5.h":"Veterinario e ambulatorio vicini","f5.p":"Salva i contatti di veterinario e ambulatorio con chiamata e mappa, più i valori di riferimento per cani e gatti.",
+    "f6.h":"Privato per natura","f6.p":"Tutto resta sul tuo iPhone. Nessun account, nessun tracciamento, nessun server. Il libretto del tuo animale è solo tuo.",
+    "show.eyebrow":"Uno sguardo più da vicino","show.h2":"Pulita, essenziale e davvero nativa",
+    "show.p":"Progettata per sentirsi a casa su iOS — in chiaro e scuro, e in sette lingue.",
+    "priv.eyebrow":"La tua privacy","priv.h2":"Niente lascia il tuo dispositivo.",
+    "priv.p":"PetDì non raccoglie dati, non richiede registrazione e non comunica con alcun server. Leggi esattamente come vengono trattate le tue informazioni — e come non lo sono.",
+    "priv.btn":"Leggi l'informativa privacy →",
+    "foot.tagline":"Il libretto che il tuo cane o gatto merita — vaccini, promemoria e altro, giorno per giorno.",
+    "foot.app":"App","foot.features":"Funzioni","foot.shots":"Schermate","foot.privacy":"Informativa privacy","foot.contact":"Contatti",
+    "foot.copy":"© 2026 PetDì. Fatto con 🐾 per gli animali e i loro umani.","foot.note":"Non è un dispositivo medico. Solo per l'archiviazione dei dati."
+  }
+};
+function setLang(l){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k=el.getAttribute('data-i18n');
+    if(I18N[l] && I18N[l][k]!==undefined) el.innerHTML=I18N[l][k];
+  });
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.toggle('active', b.dataset.l===l);});
+  try{localStorage.setItem('petdi_lang',l);}catch(e){}
+}
+var SUN='<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.4" fill="#F5C518"/><g stroke="#F5C518" stroke-width="2" stroke-linecap="round"><path d="M12 2.6v2.1M12 19.3v2.1M4.7 4.7l1.5 1.5M17.8 17.8l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.7 19.3l1.5-1.5M17.8 6.2l1.5-1.5"/></g></svg>';
+var MOON='<svg viewBox="0 0 24 24" fill="#8B5CF6"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+function applyTheme(t){
+  document.documentElement.classList.toggle('dark', t==='dark');
+  var btn=document.getElementById('themeBtn');
+  if(btn) btn.innerHTML = (t==='dark') ? SUN : MOON;
+  try{localStorage.setItem('petdi_theme',t);}catch(e){}
+}
+function toggleTheme(){ applyTheme(document.documentElement.classList.contains('dark')?'light':'dark'); }
+(function(){
+  var l=null; try{l=localStorage.getItem('petdi_lang');}catch(e){}
+  if(!l) l=(navigator.language||'en').toLowerCase().indexOf('it')===0?'it':'en';
+  setLang(l);
+  var t=null; try{t=localStorage.getItem('petdi_theme');}catch(e){}
+  if(!t) t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+  applyTheme(t);
+})();
+</script>
 </body>
 </html>

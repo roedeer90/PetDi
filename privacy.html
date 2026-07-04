@@ -6,6 +6,7 @@
 <title>Privacy Policy — PetDì</title>
 <meta name="description" content="PetDì privacy policy: the app collects no data and stores everything locally on your device.">
 <link rel="icon" href="assets/icon-light.png">
+<script>try{var t=localStorage.getItem('petdi_theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,84 +17,62 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="assets/icon-light.png" alt="PetDì icon">PetDì</a>
-    <nav class="nav-links">
-      <a href="index.html#features">Features</a>
-      <a href="index.html#look">Screenshots</a>
-      <a href="privacy.html" style="color:var(--ink)">Privacy</a>
-    </nav>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html#features" data-i18n="nav.features">Features</a>
+        <a href="index.html#look" data-i18n="nav.shots">Screenshots</a>
+      </nav>
+      <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle light or dark theme"></button>
+      <div class="lang-switch"><button data-l="it" onclick="setLang('it')">IT</button><button data-l="en" onclick="setLang('en')">EN</button></div>
+    </div>
   </div>
 </header>
 
 <main class="doc">
-  <a class="back" href="index.html">← Back to PetDì</a>
-  <h1>Privacy Policy</h1>
-  <div class="updated">Last updated: July 2026</div>
+  <a class="back" href="index.html" data-i18n="back">← Back to PetDì</a>
+  <h1 data-i18n="title">Privacy Policy</h1>
+  <div class="updated" data-i18n="updated">Last updated: July 2026</div>
 
-  <div class="lang-tabs" role="tablist">
-    <button class="active" onclick="setLang('en')">English</button>
-    <button onclick="setLang('it')">Italiano</button>
-  </div>
-
-  <!-- ENGLISH -->
   <section id="en">
     <p class="lead">In short: PetDì does not collect, transmit or share any personal data. All information stays on your device.</p>
-
     <p>PetDì (“the app”) is developed and provided by its independent developer. Your privacy matters, and this policy explains, in plain language, how data is handled when you use the app.</p>
-
     <h2>1. Data you enter</h2>
     <p>The information you add (your pet’s name and details, vaccines, visits, weight, photos, vet contacts, and so on) is stored solely on your iPhone, locally. It is never sent to us or to any third party, and is not accessible to the developer.</p>
-
     <h2>2. No data collection</h2>
     <p>The app uses no accounts, requires no sign-up, contains no analytics tools, does not track your activity and shows no ads. We collect no identifiers, location or usage data.</p>
-
     <h2>3. Camera and photos</h2>
     <p>If you choose to add a photo, the app accesses the camera or photo library only for the photo you select. The image is saved solely on your device. The app does not access the rest of your library.</p>
-
     <h2>4. Notifications</h2>
     <p>Due-date reminders are local notifications, generated and shown by your device. They do not go through any server.</p>
-
     <h2>5. Backups</h2>
     <p>App data may be included in the device backups (iCloud or computer) that you manage through Apple’s settings. Such backups are subject to Apple’s terms and privacy, not the developer’s.</p>
-
     <h2>6. Children</h2>
     <p>The app is not intended to collect data from children, and in general collects no data.</p>
-
     <h2>7. Changes to this policy</h2>
     <p>Any changes will be posted on this page, with the date at the top updated accordingly.</p>
-
     <div class="contact">
       <h2 style="margin-top:0">8. Contact</h2>
       <p style="margin:0">For questions about this policy, you can write to <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p>
     </div>
   </section>
 
-  <!-- ITALIANO -->
   <section id="it" class="hidden">
     <p class="lead">In sintesi: PetDì non raccoglie, non trasmette e non condivide alcun dato personale. Tutte le informazioni restano sul tuo dispositivo.</p>
-
     <p>PetDì (“l’app”) è sviluppata e fornita dal suo sviluppatore indipendente. La tua privacy è importante e questa informativa spiega, in modo semplice, come vengono trattati i dati quando usi l’app.</p>
-
     <h2>1. Dati che inserisci</h2>
     <p>Le informazioni che aggiungi (nome e dati dell’animale, vaccini, visite, peso, foto, contatti del veterinario, ecc.) vengono salvate esclusivamente in locale, sul tuo iPhone. Non vengono inviate a noi né a terze parti, e non sono accessibili allo sviluppatore.</p>
-
     <h2>2. Nessuna raccolta dati</h2>
     <p>L’app non utilizza account, non richiede registrazione, non contiene strumenti di analisi (analytics), non traccia la tua attività e non mostra pubblicità. Non raccogliamo identificativi, posizione o dati di utilizzo.</p>
-
     <h2>3. Fotocamera e foto</h2>
     <p>Se scegli di aggiungere una foto, l’app accede alla fotocamera o alla libreria foto solo per la foto che selezioni tu. L’immagine viene salvata unicamente sul dispositivo. L’app non accede al resto della tua libreria.</p>
-
     <h2>4. Notifiche</h2>
     <p>I promemoria delle scadenze sono notifiche locali, generate e mostrate dal tuo dispositivo. Non passano da alcun server.</p>
-
     <h2>5. Backup</h2>
     <p>I dati dell’app possono essere inclusi nei backup del dispositivo (iCloud o computer) che tu gestisci tramite le impostazioni di Apple. Tali backup sono soggetti alle condizioni e alla privacy di Apple, non dello sviluppatore.</p>
-
     <h2>6. Minori</h2>
     <p>L’app non è destinata alla raccolta di dati di minori, e in generale non raccoglie dati.</p>
-
     <h2>7. Modifiche a questa informativa</h2>
     <p>Eventuali modifiche saranno pubblicate su questa pagina, con aggiornamento della data in alto.</p>
-
     <div class="contact">
       <h2 style="margin-top:0">8. Contatti</h2>
       <p style="margin:0">Per domande su questa informativa puoi scrivere a <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p>
@@ -104,21 +83,44 @@
 <footer>
   <div class="wrap">
     <div class="copyright" style="border:0;margin:0;padding:0">
-      <span>© 2026 PetDì. Made with 🐾 for pets and their humans.</span>
+      <span data-i18n="foot.copy">© 2026 PetDì. Made with 🐾 for pets and their humans.</span>
       <a href="index.html" style="color:var(--ink-soft);font-weight:600">petdi.app</a>
     </div>
   </div>
 </footer>
 
 <script>
+var I18N={
+  en:{"nav.features":"Features","nav.shots":"Screenshots","back":"← Back to PetDì","title":"Privacy Policy","updated":"Last updated: July 2026","foot.copy":"© 2026 PetDì. Made with 🐾 for pets and their humans."},
+  it:{"nav.features":"Funzioni","nav.shots":"Schermate","back":"← Torna a PetDì","title":"Informativa Privacy","updated":"Ultimo aggiornamento: luglio 2026","foot.copy":"© 2026 PetDì. Fatto con 🐾 per gli animali e i loro umani."}
+};
 function setLang(l){
   document.getElementById('en').classList.toggle('hidden', l!=='en');
   document.getElementById('it').classList.toggle('hidden', l!=='it');
-  var btns=document.querySelectorAll('.lang-tabs button');
-  btns[0].classList.toggle('active', l==='en');
-  btns[1].classList.toggle('active', l==='it');
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k=el.getAttribute('data-i18n');
+    if(I18N[l] && I18N[l][k]!==undefined) el.innerHTML=I18N[l][k];
+  });
   document.documentElement.lang=l;
+  document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.toggle('active', b.dataset.l===l);});
+  try{localStorage.setItem('petdi_lang',l);}catch(e){}
 }
+var SUN='<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.4" fill="#F5C518"/><g stroke="#F5C518" stroke-width="2" stroke-linecap="round"><path d="M12 2.6v2.1M12 19.3v2.1M4.7 4.7l1.5 1.5M17.8 17.8l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.7 19.3l1.5-1.5M17.8 6.2l1.5-1.5"/></g></svg>';
+var MOON='<svg viewBox="0 0 24 24" fill="#8B5CF6"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+function applyTheme(t){
+  document.documentElement.classList.toggle('dark', t==='dark');
+  var btn=document.getElementById('themeBtn'); if(btn) btn.innerHTML=(t==='dark')?SUN:MOON;
+  try{localStorage.setItem('petdi_theme',t);}catch(e){}
+}
+function toggleTheme(){ applyTheme(document.documentElement.classList.contains('dark')?'light':'dark'); }
+(function(){
+  var l=null; try{l=localStorage.getItem('petdi_lang');}catch(e){}
+  if(!l) l=(navigator.language||'en').toLowerCase().indexOf('it')===0?'it':'en';
+  setLang(l);
+  var t=null; try{t=localStorage.getItem('petdi_theme');}catch(e){}
+  if(!t) t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+  applyTheme(t);
+})();
 </script>
 </body>
 </html>
