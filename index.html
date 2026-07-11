@@ -25,7 +25,9 @@
         <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
       </nav>
       <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle light or dark theme"></button>
-      <div class="lang-switch"><button data-l="it" onclick="setLang('it')">IT</button><button data-l="en" onclick="setLang('en')">EN</button></div>
+      <select class="lang-select" id="langSel" onchange="setLang(this.value)" aria-label="Language">
+        <option value="it">Italiano</option><option value="en">English</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="el">Ελληνικά</option><option value="ja">日本語</option><option value="pt">Português</option>
+      </select>
     </div>
   </div>
 </header>
@@ -35,11 +37,11 @@
     <div class="hero-copy">
       <div class="eyebrow" data-i18n="hero.eyebrow">Digital pet health record</div>
       <h1 data-i18n="hero.h1">The health record your dog or cat <span class="tint">deserves.</span></h1>
-      <p class="lead" data-i18n="hero.lead">Vaccines, treatments, check-ups and reminders: everything about your pet's health, in your pocket and up to date.</p>
+      <p class="lead" data-i18n="hero.lead">Vaccines, treatments, check-ups and reminders — everything about your pet's health, in your pocket and up to date.</p>
       <div class="hero-cta">
-        <a class="store-badge" href="https://apps.apple.com/app/petdì/id6787153236" target="_blank" rel="noopener">
+        <a class="store-badge" href="#look">
           <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.543 12.75c-.024-2.148 1.757-3.178 1.838-3.229-1.001-1.465-2.559-1.665-3.115-1.688-1.327-.134-2.588.781-3.261.781-.669 0-1.708-.761-2.808-.741-1.446.021-2.78.84-3.523 2.134-1.502 2.606-.384 6.459 1.078 8.573.714 1.035 1.565 2.196 2.681 2.155 1.076-.043 1.483-.696 2.783-.696 1.299 0 1.666.696 2.805.675 1.157-.02 1.891-1.055 2.601-2.093.818-1.199 1.156-2.361 1.176-2.421-.026-.012-2.258-.867-2.281-3.438zM15.4 6.505c.593-.719.993-1.717.884-2.71-.854.035-1.888.569-2.501 1.287-.55.637-1.031 1.653-.902 2.627.953.074 1.926-.485 2.519-1.204z"/></svg>
-          <span><small data-i18n="hero.badge_small">Download on the</small><b data-i18n="hero.badge_big">App Store</b></span>
+          <span><small data-i18n="hero.badge_small">Coming soon to the</small><b data-i18n="hero.badge_big">App Store</b></span>
         </a>
         <div class="dotrow"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </div>
@@ -55,8 +57,8 @@
 <section class="pitch">
   <div class="wrap">
     <div class="eyebrow" data-i18n="pitch.eyebrow">Say goodbye to paper</div>
-    <h2 data-i18n="pitch.h2">Is your paper booklet torn, faded, and never around when the vet asks?</h2>
-    <p data-i18n="pitch.p">PetDì keeps every vaccine, treatment and check-up in one tidy place and nudges you <span class="tint">before</span> anything expires. No more digging through drawers or guessing when the next shot is due.</p>
+    <h2 data-i18n="pitch.h2">Your paper booklet is torn, faded, and never around when the vet asks.</h2>
+    <p data-i18n="pitch.p">PetDì keeps every vaccine, treatment and check-up in one tidy place — and nudges you <span class="tint">before</span> anything expires. No more digging through drawers or guessing when the next shot is due.</p>
   </div>
 </section>
 
@@ -71,34 +73,40 @@
       <div class="card">
         <div class="ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="20" cy="18" r="1.4" fill="currentColor" stroke="none"/></svg></div>
         <h3 data-i18n="f1.h">Full health record</h3>
-        <p data-i18n="f1.p">Vaccines, boosters, antiparasitics, deworming and check-ups: each with dates, batch numbers and notes.</p>
+        <p data-i18n="f1.p">Vaccines, boosters, antiparasitics, deworming and check-ups — each with dates, batch numbers and notes.</p>
       </div>
       <div class="card">
-        <div class="ic violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+        <div class="ic violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="9" r="1.4" fill="currentColor" stroke="none"/><circle cx="9.6" cy="6.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="14.4" cy="6.4" r="1.4" fill="currentColor" stroke="none"/><circle cx="18.5" cy="9" r="1.4" fill="currentColor" stroke="none"/><path d="M12 11.4c-2.2 0-3.9 1.7-3.9 3.8 0 1.7 1.5 2.4 3.9 2.4s3.9-.7 3.9-2.4c0-2.1-1.7-3.8-3.9-3.8z"/></svg></div>
+        <h3 data-i18n="multipet.h">Multiple pets</h3>
+        <p data-i18n="multipet.p">Manage all your animals in a single app, each with its own record: dog, cat, rabbit, ferret and more.</p>
+      </div>
+      <div class="card">
+        <div class="ic orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
         <h3 data-i18n="f2.h">Smart reminders</h3>
-        <p data-i18n="f2.p">Automatic alerts before every due date, so a vaccine or treatment never slips your mind again.</p>
+        <p data-i18n="f2.p">Automatic alerts before every due date, with custom timing and time of day — nothing slips your mind again.</p>
       </div>
       <div class="card">
-        <div class="ic blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5v14M7.5 5v14M11 5v14M14 5v14M17.5 5v14M21 5v14" opacity=".9"/></svg></div>
+        <div class="ic blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2.4"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M7.2 15.5l2.6-2.6 2 2 3.2-3.6"/></svg></div>
+        <h3 data-i18n="calendar.h">Calendar & charts</h3>
+        <p data-i18n="calendar.p">Vaccines and check-ups month by month on the calendar, with interactive weight and temperature trends.</p>
+      </div>
+      <div class="card">
+        <div class="ic sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5v14M7.5 5v14M11 5v14M14 5v14M17.5 5v14M21 5v14" opacity=".9"/></svg></div>
         <h3 data-i18n="f3.h">Microchip on hand</h3>
         <p data-i18n="f3.p">Your pet's microchip as a QR and barcode, ready to show the vet or shelter in a single tap.</p>
       </div>
       <div class="card">
-        <div class="ic orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg></div>
-        <h3 data-i18n="f4.h">Weight, temp &amp; more</h3>
-        <p data-i18n="f4.p">Log weight, temperature and blood pressure at each visit, and watch the history build over time.</p>
+        <div class="ic red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="8" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="18" cy="8" r="2"/><path d="M8.5 16c0-2.5 1.6-4 3.5-4s3.5 1.5 3.5 4c0 1.7-1.6 2-3.5 2s-3.5-.3-3.5-2z"/></svg></div>
+        <h3 data-i18n="f5.h">Your vet, always close</h3>
+        <p data-i18n="f5.p">Vet and clinic contacts with one-tap call and map, plus reference physiological values for each species.</p>
       </div>
       <div class="card">
-        <div class="ic sage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="8" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="18" cy="8" r="2"/><path d="M8.5 16c0-2.5 1.6-4 3.5-4s3.5 1.5 3.5 4c0 1.7-1.6 2-3.5 2s-3.5-.3-3.5-2z"/></svg></div>
-        <h3 data-i18n="f5.h">Vet &amp; clinic close by</h3>
-        <p data-i18n="f5.p">Save vet and clinic contacts with one-tap call and map, plus reference values for dogs and cats.</p>
-      </div>
-      <div class="card">
-        <div class="ic red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+        <div class="ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
         <h3 data-i18n="f6.h">Private by design</h3>
         <p data-i18n="f6.p">Everything stays on your iPhone. No account, no tracking, no servers. Your pet's record is yours alone.</p>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -107,7 +115,7 @@
     <div class="section-head">
       <div class="eyebrow" data-i18n="show.eyebrow">A closer look</div>
       <h2 data-i18n="show.h2">Clean, calm, and truly native</h2>
-      <p data-i18n="show.p">Designed to feel right at home on iOS: in light and dark, and in seven languages.</p>
+      <p data-i18n="show.p">Designed to feel right at home on iOS — in light and dark, and in seven languages.</p>
     </div>
     <div class="shots">
       <div class="phone lift"><img src="assets/record.jpg" alt="Health record"></div>
@@ -123,7 +131,7 @@
       <div>
         <div class="eyebrow" data-i18n="priv.eyebrow">Your privacy</div>
         <h2 data-i18n="priv.h2">Nothing leaves your device.</h2>
-        <p data-i18n="priv.p">PetDì collects no data, requires no sign-up and talks to no server. Read exactly how your information is handled and how it isn't.</p>
+        <p data-i18n="priv.p">PetDì collects no data, requires no sign-up and talks to no server. Read exactly how your information is handled — and how it isn't.</p>
         <a class="btn-ghost" href="privacy.html" data-i18n="priv.btn">Read the privacy policy →</a>
       </div>
       <div class="pb-lock">
@@ -138,7 +146,7 @@
     <div class="foot">
       <div>
         <a class="brand" href="#top"><img src="assets/icon-light.png" alt="PetDì icon">PetDì</a>
-        <p data-i18n="foot.tagline">The health record your dog or cat deserves: vaccines, reminders and more, day by day.</p>
+        <p data-i18n="foot.tagline">The health record your dog or cat deserves — vaccines, reminders and more, day by day.</p>
       </div>
       <div class="foot-links">
         <div>
@@ -162,58 +170,366 @@
 
 <script>
 const I18N = {
-  en:{
-    "nav.features":"Features","nav.shots":"Screenshots","nav.privacy":"Privacy",
-    "hero.eyebrow":"Digital pet health record",
-    "hero.h1":"The health record your dog or cat <span class=\"tint\">deserves.</span>",
-    "hero.lead":"Vaccines, treatments, check-ups and reminders: everything about your pet's health, in your pocket and up to date.",
-    "hero.badge_small":"Download on the","hero.badge_big":"App Store",
-    "pitch.eyebrow":"Say goodbye to paper",
-    "pitch.h2":"Is your paper booklet torn, faded, and never around when the vet asks?",
-    "pitch.p":"PetDì keeps every vaccine, treatment and check-up in one tidy place and nudges you <span class=\"tint\">before</span> anything expires. No more digging through drawers or guessing when the next shot is due.",
-    "feat.eyebrow":"Everything in one place","feat.h2":"Built around your pet's day&#8209;to&#8209;day",
-    "feat.p":"The small things that keep an animal healthy, finally easy to track and impossible to forget.",
-    "f1.h":"Full health record","f1.p":"Vaccines, boosters, antiparasitics, deworming and check-ups: each with dates, batch numbers and notes.",
-    "f2.h":"Smart reminders","f2.p":"Automatic alerts before every due date, so a vaccine or treatment never slips your mind again.",
-    "f3.h":"Microchip on hand","f3.p":"Your pet's microchip as a QR and barcode, ready to show the vet or shelter in a single tap.",
-    "f4.h":"Weight, temp &amp; more","f4.p":"Log weight, temperature and blood pressure at each visit, and watch the history build over time.",
-    "f5.h":"Vet &amp; clinic close by","f5.p":"Save vet and clinic contacts with one-tap call and map, plus reference values for dogs and cats.",
-    "f6.h":"Private by design","f6.p":"Everything stays on your iPhone. No account, no tracking, no servers. Your pet's record is yours alone.",
-    "show.eyebrow":"A closer look","show.h2":"Clean, calm, and truly native",
-    "show.p":"Designed to feel right at home on iOS: in light and dark, and in seven languages.",
-    "priv.eyebrow":"Your privacy","priv.h2":"Nothing leaves your device.",
-    "priv.p":"PetDì collects no data, requires no sign-up and talks to no server. Read exactly how your information is handled and how it isn't.",
-    "priv.btn":"Read the privacy policy →",
-    "foot.tagline":"The health record your dog or cat deserves: vaccines, reminders and more, day by day.",
-    "foot.app":"App","foot.features":"Features","foot.shots":"Screenshots","foot.privacy":"Privacy policy","foot.contact":"Contact",
-    "foot.copy":"© 2026 PetDì. Made with 🐾 for pets and their humans.","foot.note":"Not a medical device. For record-keeping only."
-  },
-  it:{
-    "nav.features":"Funzioni","nav.shots":"Schermate","nav.privacy":"Privacy",
-    "hero.eyebrow":"Libretto sanitario digitale",
-    "hero.h1":"Il libretto che il tuo cane o gatto <span class=\"tint\">merita.</span>",
-    "hero.lead":"Vaccini, trattamenti, controlli e promemoria: tutta la salute del tuo animale, in tasca e sempre aggiornata.",
-    "hero.badge_small":"Scarica su","hero.badge_big":"App Store",
-    "pitch.eyebrow":"Addio alla carta",
-    "pitch.h2":"Il tuo libretto di carta è strappato, sbiadito e non si trova mai quando serve?",
-    "pitch.p":"PetDì tiene ogni vaccino, trattamento e controllo in un unico posto ordinato e ti avvisa <span class=\"tint\">prima</span> che scada qualcosa. Basta frugare nei cassetti o tirare a indovinare quando tocca il prossimo richiamo.",
-    "feat.eyebrow":"Tutto in un unico posto","feat.h2":"Pensato per la vita quotidiana del tuo pet",
-    "feat.p":"Le piccole cose che tengono in salute un animale, finalmente facili da segnare e impossibili da dimenticare.",
-    "f1.h":"Libretto completo","f1.p":"Vaccini, richiami, antiparassitari, sverminazioni e controlli: ognuno con date, numeri di lotto e note.",
-    "f2.h":"Promemoria intelligenti","f2.p":"Avvisi automatici prima di ogni scadenza, così un vaccino o un trattamento non ti sfugge più.",
-    "f3.h":"Microchip a portata","f3.p":"Il microchip del tuo animale come QR e codice a barre, pronto da mostrare al veterinario o al canile con un tocco.",
-    "f4.h":"Peso, temperatura e altro","f4.p":"Registra peso, temperatura e pressione a ogni visita e guarda crescere lo storico nel tempo.",
-    "f5.h":"Veterinario e ambulatorio vicini","f5.p":"Salva i contatti di veterinario e ambulatorio con chiamata e mappa, più i valori di riferimento per cani e gatti.",
-    "f6.h":"Privato per natura","f6.p":"Tutto resta sul tuo iPhone. Nessun account, nessun tracciamento, nessun server. Il libretto del tuo animale è solo tuo.",
-    "show.eyebrow":"Uno sguardo più da vicino","show.h2":"Pulita, essenziale e davvero nativa",
-    "show.p":"Progettata per sentirsi a casa su iOS: in chiaro e scuro, e in sette lingue.",
-    "priv.eyebrow":"La tua privacy","priv.h2":"Niente lascia il tuo dispositivo.",
-    "priv.p":"PetDì non raccoglie dati, non richiede registrazione e non comunica con alcun server. Leggi esattamente come vengono trattate le tue informazioni e come non lo sono.",
-    "priv.btn":"Leggi l'informativa privacy →",
-    "foot.tagline":"Il libretto che il tuo cane o gatto merita: vaccini, promemoria e altro, giorno per giorno.",
-    "foot.app":"App","foot.features":"Funzioni","foot.shots":"Schermate","foot.privacy":"Informativa privacy","foot.contact":"Contatti",
-    "foot.copy":"© 2026 PetDì. Fatto con 🐾 per gli animali e i loro umani.","foot.note":"Non è un dispositivo medico. Solo per l'archiviazione dei dati."
-  }
+ "it": {
+  "nav.features": "Funzioni",
+  "nav.shots": "Schermate",
+  "nav.privacy": "Privacy",
+  "hero.eyebrow": "Libretto sanitario digitale",
+  "hero.h1": "Il libretto che il tuo cane o gatto <span class=\"tint\">merita.</span>",
+  "hero.lead": "Vaccini, trattamenti, controlli e promemoria — e ora più animali, calendario e grafici. Tutta la salute del tuo pet, in tasca e in ordine.",
+  "hero.badge_small": "Scarica su",
+  "hero.badge_big": "App Store",
+  "pitch.eyebrow": "Addio alla carta",
+  "pitch.h2": "Il tuo libretto di carta è strappato, sbiadito e non si trova mai quando serve.",
+  "pitch.p": "PetDì tiene ogni vaccino, trattamento e controllo in un unico posto ordinato — e ti avvisa <span class=\"tint\">prima</span> che scada qualcosa. Basta frugare nei cassetti.",
+  "feat.eyebrow": "Tutto in un unico posto",
+  "feat.h2": "Pensato per la vita quotidiana del tuo pet",
+  "feat.p": "Le piccole cose che tengono in salute un animale, finalmente facili da segnare e impossibili da dimenticare.",
+  "f1.h": "Libretto completo",
+  "f1.p": "Vaccini, richiami, antiparassitari, sverminazioni e controlli, ognuno con date, numeri di lotto e note.",
+  "multipet.h": "Più animali",
+  "multipet.p": "Gestisci tutti i tuoi animali in un'unica app, ognuno con il suo libretto: cane, gatto, coniglio, furetto e altro.",
+  "f2.h": "Promemoria intelligenti",
+  "f2.p": "Avvisi automatici prima di ogni scadenza, con anticipo e orario personalizzabili: non ti sfuggirà più nulla.",
+  "calendar.h": "Calendario e grafici",
+  "calendar.p": "Vaccini e controlli mese per mese sul calendario, con l'andamento interattivo di peso e temperatura.",
+  "f3.h": "Microchip a portata",
+  "f3.p": "Il microchip del tuo animale come QR e codice a barre, pronto da mostrare al veterinario o al canile.",
+  "f5.h": "Veterinario sempre vicino",
+  "f5.p": "Contatti di veterinario e ambulatorio con chiamata e mappa, più i valori fisiologici di riferimento per ogni specie.",
+  "f6.h": "Privato per natura",
+  "f6.p": "Tutto resta sul tuo iPhone. Nessun account, nessun tracciamento, nessun server. Il libretto del tuo animale è solo tuo.",
+  "show.eyebrow": "Uno sguardo più da vicino",
+  "show.h2": "Pulita, essenziale e davvero nativa",
+  "show.p": "Progettata per sentirsi a casa su iOS — in chiaro e scuro, e in 8 lingue.",
+  "priv.eyebrow": "La tua privacy",
+  "priv.h2": "Niente lascia il tuo dispositivo.",
+  "priv.p": "PetDì non raccoglie dati, non richiede registrazione e non comunica con alcun server. Leggi come vengono trattate le tue informazioni — e come non lo sono.",
+  "priv.btn": "Leggi l'informativa privacy →",
+  "foot.tagline": "Il libretto che il tuo cane o gatto merita — vaccini, promemoria e altro, giorno per giorno.",
+  "foot.app": "App",
+  "foot.features": "Funzioni",
+  "foot.shots": "Schermate",
+  "foot.privacy": "Informativa privacy",
+  "foot.contact": "Contatti",
+  "foot.copy": "© 2026 PetDì. Fatto con 🐾 per gli animali e i loro umani.",
+  "foot.note": "Non è un dispositivo medico. Solo per l'archiviazione dei dati."
+ },
+ "en": {
+  "nav.features": "Features",
+  "nav.shots": "Screenshots",
+  "nav.privacy": "Privacy",
+  "hero.eyebrow": "Digital pet health record",
+  "hero.h1": "The health record your dog or cat <span class=\"tint\">deserves.</span>",
+  "hero.lead": "Vaccines, treatments, check-ups and reminders — now with multiple pets, a calendar and charts. All your pet's health, in your pocket and organized.",
+  "hero.badge_small": "Download on the",
+  "hero.badge_big": "App Store",
+  "pitch.eyebrow": "Say goodbye to paper",
+  "pitch.h2": "Your paper booklet is torn, faded, and never around when the vet asks.",
+  "pitch.p": "PetDì keeps every vaccine, treatment and check-up in one tidy place — and nudges you <span class=\"tint\">before</span> anything expires. No more digging through drawers.",
+  "feat.eyebrow": "Everything in one place",
+  "feat.h2": "Built around your pet's day&#8209;to&#8209;day",
+  "feat.p": "The small things that keep an animal healthy, finally easy to track and impossible to forget.",
+  "f1.h": "Full health record",
+  "f1.p": "Vaccines, boosters, antiparasitics, deworming and check-ups — each with dates, batch numbers and notes.",
+  "multipet.h": "Multiple pets",
+  "multipet.p": "Manage all your animals in a single app, each with its own record: dog, cat, rabbit, ferret and more.",
+  "f2.h": "Smart reminders",
+  "f2.p": "Automatic alerts before every due date, with custom timing and time of day — nothing slips your mind again.",
+  "calendar.h": "Calendar & charts",
+  "calendar.p": "Vaccines and check-ups month by month on the calendar, with interactive weight and temperature trends.",
+  "f3.h": "Microchip on hand",
+  "f3.p": "Your pet's microchip as a QR and barcode, ready to show the vet or shelter in a single tap.",
+  "f5.h": "Your vet, always close",
+  "f5.p": "Vet and clinic contacts with one-tap call and map, plus reference physiological values for each species.",
+  "f6.h": "Private by design",
+  "f6.p": "Everything stays on your iPhone. No account, no tracking, no servers. Your pet's record is yours alone.",
+  "show.eyebrow": "A closer look",
+  "show.h2": "Clean, calm, and truly native",
+  "show.p": "Designed to feel right at home on iOS — in light and dark, and in 8 languages.",
+  "priv.eyebrow": "Your privacy",
+  "priv.h2": "Nothing leaves your device.",
+  "priv.p": "PetDì collects no data, requires no sign-up and talks to no server. Read exactly how your information is handled — and how it isn't.",
+  "priv.btn": "Read the privacy policy →",
+  "foot.tagline": "The health record your dog or cat deserves — vaccines, reminders and more, day by day.",
+  "foot.app": "App",
+  "foot.features": "Features",
+  "foot.shots": "Screenshots",
+  "foot.privacy": "Privacy policy",
+  "foot.contact": "Contact",
+  "foot.copy": "© 2026 PetDì. Made with 🐾 for pets and their humans.",
+  "foot.note": "Not a medical device. For record-keeping only."
+ },
+ "fr": {
+  "nav.features": "Fonctions",
+  "nav.shots": "Captures",
+  "nav.privacy": "Confidentialité",
+  "hero.eyebrow": "Carnet de santé numérique",
+  "hero.h1": "Le carnet que votre chien ou chat <span class=\"tint\">mérite.</span>",
+  "hero.lead": "Vaccins, traitements, contrôles et rappels — et désormais plusieurs animaux, un calendrier et des graphiques. Toute la santé de votre animal, dans votre poche.",
+  "hero.badge_small": "Télécharger dans l'",
+  "hero.badge_big": "App Store",
+  "pitch.eyebrow": "Adieu le papier",
+  "pitch.h2": "Votre carnet papier est déchiré, délavé et jamais là quand le vétérinaire le demande.",
+  "pitch.p": "PetDì réunit vaccins, traitements et contrôles au même endroit — et vous prévient <span class=\"tint\">avant</span> chaque échéance. Fini de fouiller les tiroirs.",
+  "feat.eyebrow": "Tout au même endroit",
+  "feat.h2": "Pensé pour le quotidien de votre animal",
+  "feat.p": "Les petites choses qui gardent un animal en bonne santé, enfin faciles à noter et impossibles à oublier.",
+  "f1.h": "Carnet complet",
+  "f1.p": "Vaccins, rappels, antiparasitaires, vermifuges et contrôles, chacun avec dates, numéros de lot et notes.",
+  "multipet.h": "Plusieurs animaux",
+  "multipet.p": "Gérez tous vos animaux dans une seule app, chacun avec son carnet : chien, chat, lapin, furet et plus.",
+  "f2.h": "Rappels intelligents",
+  "f2.p": "Alertes automatiques avant chaque échéance, avec délai et heure personnalisables — vous n'oublierez plus rien.",
+  "calendar.h": "Calendrier et graphiques",
+  "calendar.p": "Vaccins et contrôles mois par mois sur le calendrier, avec l'évolution interactive du poids et de la température.",
+  "f3.h": "Puce à portée de main",
+  "f3.p": "La puce de votre animal en QR et code-barres, prête à montrer au vétérinaire ou au refuge.",
+  "f5.h": "Votre vétérinaire, toujours proche",
+  "f5.p": "Contacts du vétérinaire et du cabinet avec appel et carte, ainsi que les valeurs physiologiques de référence pour chaque espèce.",
+  "f6.h": "Privé par nature",
+  "f6.p": "Tout reste sur votre iPhone. Aucun compte, aucun suivi, aucun serveur. Le carnet de votre animal n'appartient qu'à vous.",
+  "show.eyebrow": "De plus près",
+  "show.h2": "Épurée, claire et vraiment native",
+  "show.p": "Conçue pour être à l'aise sur iOS — en clair et sombre, et en 8 langues.",
+  "priv.eyebrow": "Votre confidentialité",
+  "priv.h2": "Rien ne quitte votre appareil.",
+  "priv.p": "PetDì ne collecte aucune donnée, ne demande aucune inscription et ne communique avec aucun serveur. Découvrez comment vos informations sont traitées — et comment elles ne le sont pas.",
+  "priv.btn": "Lire la politique de confidentialité →",
+  "foot.tagline": "Le carnet que votre chien ou chat mérite — vaccins, rappels et plus, jour après jour.",
+  "foot.app": "App",
+  "foot.features": "Fonctions",
+  "foot.shots": "Captures",
+  "foot.privacy": "Politique de confidentialité",
+  "foot.contact": "Contact",
+  "foot.copy": "© 2026 PetDì. Fait avec 🐾 pour les animaux et leurs humains.",
+  "foot.note": "Pas un dispositif médical. Uniquement pour la conservation des données."
+ },
+ "de": {
+  "nav.features": "Funktionen",
+  "nav.shots": "Screenshots",
+  "nav.privacy": "Datenschutz",
+  "hero.eyebrow": "Digitales Gesundheitsheft",
+  "hero.h1": "Das Heft, das dein Hund oder deine Katze <span class=\"tint\">verdient.</span>",
+  "hero.lead": "Impfungen, Behandlungen, Kontrollen und Erinnerungen — jetzt mit mehreren Tieren, Kalender und Diagrammen. Die ganze Gesundheit deines Tieres, immer dabei.",
+  "hero.badge_small": "Laden im",
+  "hero.badge_big": "App Store",
+  "pitch.eyebrow": "Schluss mit Papier",
+  "pitch.h2": "Dein Impfpass aus Papier ist zerrissen, verblasst und nie da, wenn der Tierarzt fragt.",
+  "pitch.p": "PetDì hält jede Impfung, Behandlung und Kontrolle an einem Ort — und erinnert dich <span class=\"tint\">vor</span> jeder Fälligkeit. Kein Kramen in Schubladen mehr.",
+  "feat.eyebrow": "Alles an einem Ort",
+  "feat.h2": "Für den Alltag deines Tieres gemacht",
+  "feat.p": "Die kleinen Dinge, die ein Tier gesund halten — endlich leicht zu erfassen und unmöglich zu vergessen.",
+  "f1.h": "Vollständiges Heft",
+  "f1.p": "Impfungen, Auffrischungen, Parasitenschutz, Entwurmungen und Kontrollen — mit Datum, Chargennummern und Notizen.",
+  "multipet.h": "Mehrere Tiere",
+  "multipet.p": "Verwalte all deine Tiere in einer App, jedes mit eigenem Heft: Hund, Katze, Kaninchen, Frettchen und mehr.",
+  "f2.h": "Intelligente Erinnerungen",
+  "f2.p": "Automatische Hinweise vor jeder Fälligkeit, mit anpassbarem Vorlauf und Uhrzeit — du vergisst nichts mehr.",
+  "calendar.h": "Kalender & Diagramme",
+  "calendar.p": "Impfungen und Kontrollen Monat für Monat im Kalender, mit interaktivem Gewichts- und Temperaturverlauf.",
+  "f3.h": "Mikrochip zur Hand",
+  "f3.p": "Der Mikrochip deines Tieres als QR und Barcode, bereit zum Vorzeigen bei Tierarzt oder Tierheim.",
+  "f5.h": "Dein Tierarzt, immer nah",
+  "f5.p": "Kontakte von Tierarzt und Praxis mit Anruf und Karte, dazu physiologische Referenzwerte für jede Tierart.",
+  "f6.h": "Privat von Grund auf",
+  "f6.p": "Alles bleibt auf deinem iPhone. Kein Konto, kein Tracking, keine Server. Das Heft deines Tieres gehört nur dir.",
+  "show.eyebrow": "Aus der Nähe",
+  "show.h2": "Klar, ruhig und wirklich nativ",
+  "show.p": "Entworfen, um sich auf iOS zu Hause zu fühlen — in Hell und Dunkel, und in 8 Sprachen.",
+  "priv.eyebrow": "Dein Datenschutz",
+  "priv.h2": "Nichts verlässt dein Gerät.",
+  "priv.p": "PetDì sammelt keine Daten, verlangt keine Anmeldung und spricht mit keinem Server. Lies, wie deine Daten behandelt werden — und wie nicht.",
+  "priv.btn": "Datenschutzerklärung lesen →",
+  "foot.tagline": "Das Heft, das dein Hund oder deine Katze verdient — Impfungen, Erinnerungen und mehr, Tag für Tag.",
+  "foot.app": "App",
+  "foot.features": "Funktionen",
+  "foot.shots": "Screenshots",
+  "foot.privacy": "Datenschutzerklärung",
+  "foot.contact": "Kontakt",
+  "foot.copy": "© 2026 PetDì. Mit 🐾 gemacht für Tiere und ihre Menschen.",
+  "foot.note": "Kein Medizinprodukt. Nur zur Datenspeicherung."
+ },
+ "es": {
+  "nav.features": "Funciones",
+  "nav.shots": "Capturas",
+  "nav.privacy": "Privacidad",
+  "hero.eyebrow": "Cartilla sanitaria digital",
+  "hero.h1": "La cartilla que tu perro o gato <span class=\"tint\">merece.</span>",
+  "hero.lead": "Vacunas, tratamientos, revisiones y recordatorios — y ahora varias mascotas, calendario y gráficos. Toda la salud de tu mascota, en tu bolsillo.",
+  "hero.badge_small": "Descargar en el",
+  "hero.badge_big": "App Store",
+  "pitch.eyebrow": "Adiós al papel",
+  "pitch.h2": "Tu cartilla de papel está rota, descolorida y nunca aparece cuando el veterinario la pide.",
+  "pitch.p": "PetDì reúne cada vacuna, tratamiento y revisión en un solo lugar — y te avisa <span class=\"tint\">antes</span> de que venza algo. Se acabó rebuscar en los cajones.",
+  "feat.eyebrow": "Todo en un solo lugar",
+  "feat.h2": "Pensado para el día a día de tu mascota",
+  "feat.p": "Las pequeñas cosas que mantienen sano a un animal, por fin fáciles de anotar e imposibles de olvidar.",
+  "f1.h": "Cartilla completa",
+  "f1.p": "Vacunas, refuerzos, antiparasitarios, desparasitaciones y revisiones, cada uno con fechas, lotes y notas.",
+  "multipet.h": "Varias mascotas",
+  "multipet.p": "Gestiona todos tus animales en una sola app, cada uno con su cartilla: perro, gato, conejo, hurón y más.",
+  "f2.h": "Recordatorios inteligentes",
+  "f2.p": "Avisos automáticos antes de cada vencimiento, con antelación y hora personalizables — no se te escapa nada.",
+  "calendar.h": "Calendario y gráficos",
+  "calendar.p": "Vacunas y revisiones mes a mes en el calendario, con la evolución interactiva del peso y la temperatura.",
+  "f3.h": "Microchip a mano",
+  "f3.p": "El microchip de tu mascota como QR y código de barras, listo para mostrar al veterinario o a la protectora.",
+  "f5.h": "Tu veterinario, siempre cerca",
+  "f5.p": "Contactos del veterinario y la clínica con llamada y mapa, más los valores fisiológicos de referencia para cada especie.",
+  "f6.h": "Privado por naturaleza",
+  "f6.p": "Todo se queda en tu iPhone. Sin cuenta, sin seguimiento, sin servidores. La cartilla de tu mascota es solo tuya.",
+  "show.eyebrow": "Una mirada de cerca",
+  "show.h2": "Limpia, serena y realmente nativa",
+  "show.p": "Diseñada para sentirse como en casa en iOS — en claro y oscuro, y en 8 idiomas.",
+  "priv.eyebrow": "Tu privacidad",
+  "priv.h2": "Nada sale de tu dispositivo.",
+  "priv.p": "PetDì no recopila datos, no requiere registro y no habla con ningún servidor. Descubre cómo se tratan tus datos — y cómo no.",
+  "priv.btn": "Leer la política de privacidad →",
+  "foot.tagline": "La cartilla que tu perro o gato merece — vacunas, recordatorios y más, día a día.",
+  "foot.app": "App",
+  "foot.features": "Funciones",
+  "foot.shots": "Capturas",
+  "foot.privacy": "Política de privacidad",
+  "foot.contact": "Contacto",
+  "foot.copy": "© 2026 PetDì. Hecho con 🐾 para las mascotas y sus humanos.",
+  "foot.note": "No es un producto sanitario. Solo para guardar los datos."
+ },
+ "el": {
+  "nav.features": "Λειτουργίες",
+  "nav.shots": "Στιγμιότυπα",
+  "nav.privacy": "Απόρρητο",
+  "hero.eyebrow": "Ψηφιακό βιβλιάριο υγείας",
+  "hero.h1": "Το βιβλιάριο που αξίζει <span class=\"tint\">στον σκύλο ή στη γάτα σου.</span>",
+  "hero.lead": "Εμβόλια, θεραπείες, έλεγχοι και υπενθυμίσεις — τώρα με πολλά ζώα, ημερολόγιο και γραφήματα. Όλη η υγεία του ζώου σου, στην τσέπη σου.",
+  "hero.badge_small": "Λήψη από το",
+  "hero.badge_big": "App Store",
+  "pitch.eyebrow": "Αντίο στο χαρτί",
+  "pitch.h2": "Το χάρτινο βιβλιάριο είναι σκισμένο, ξεθωριασμένο και ποτέ δεν το βρίσκεις όταν το ζητά ο κτηνίατρος.",
+  "pitch.p": "Το PetDì κρατά κάθε εμβόλιο, θεραπεία και έλεγχο σε ένα τακτοποιημένο μέρος — και σε ειδοποιεί <span class=\"tint\">πριν</span> λήξει κάτι.",
+  "feat.eyebrow": "Όλα σε ένα μέρος",
+  "feat.h2": "Φτιαγμένο για την καθημερινότητα του ζώου σου",
+  "feat.p": "Οι μικρές λεπτομέρειες που κρατούν ένα ζώο υγιές, επιτέλους εύκολες να καταγράψεις.",
+  "f1.h": "Πλήρες βιβλιάριο",
+  "f1.p": "Εμβόλια, αναμνηστικά, αντιπαρασιτικά, αποπαρασιτώσεις και έλεγχοι, με ημερομηνίες, παρτίδες και σημειώσεις.",
+  "multipet.h": "Πολλά ζώα",
+  "multipet.p": "Διαχειρίσου όλα τα ζώα σου σε μία εφαρμογή, το καθένα με το δικό του βιβλιάριο: σκύλος, γάτα, κουνέλι και άλλα.",
+  "f2.h": "Έξυπνες υπενθυμίσεις",
+  "f2.p": "Αυτόματες ειδοποιήσεις πριν από κάθε λήξη, με ρυθμιζόμενο χρόνο και ώρα — δεν ξεχνάς τίποτα.",
+  "calendar.h": "Ημερολόγιο & γραφήματα",
+  "calendar.p": "Εμβόλια και έλεγχοι μήνα με μήνα στο ημερολόγιο, με διαδραστική πορεία βάρους και θερμοκρασίας.",
+  "f3.h": "Μικροτσίπ στο χέρι",
+  "f3.p": "Το μικροτσίπ του ζώου σου ως QR και barcode, έτοιμο να δείξεις στον κτηνίατρο ή στο καταφύγιο.",
+  "f5.h": "Ο κτηνίατρός σου, πάντα κοντά",
+  "f5.p": "Στοιχεία κτηνιάτρου και ιατρείου με κλήση και χάρτη, μαζί με φυσιολογικές τιμές αναφοράς για κάθε είδος.",
+  "f6.h": "Ιδιωτικό εξ ορισμού",
+  "f6.p": "Όλα μένουν στο iPhone σου. Χωρίς λογαριασμό, χωρίς παρακολούθηση, χωρίς διακομιστές. Το βιβλιάριο είναι μόνο δικό σου.",
+  "show.eyebrow": "Πιο κοντά",
+  "show.h2": "Καθαρή, ήρεμη και πραγματικά native",
+  "show.p": "Σχεδιασμένη για να νιώθει σαν στο σπίτι της στο iOS — σε φωτεινό και σκοτεινό, και σε 8 γλώσσες.",
+  "priv.eyebrow": "Το απόρρητό σου",
+  "priv.h2": "Τίποτα δεν φεύγει από τη συσκευή σου.",
+  "priv.p": "Το PetDì δεν συλλέγει δεδομένα, δεν απαιτεί εγγραφή και δεν επικοινωνεί με κανέναν διακομιστή. Δες πώς αντιμετωπίζονται τα δεδομένα σου — και πώς όχι.",
+  "priv.btn": "Διάβασε την πολιτική απορρήτου →",
+  "foot.tagline": "Το βιβλιάριο που αξίζει στον σκύλο ή στη γάτα σου — εμβόλια, υπενθυμίσεις και άλλα, μέρα με τη μέρα.",
+  "foot.app": "Εφαρμογή",
+  "foot.features": "Λειτουργίες",
+  "foot.shots": "Στιγμιότυπα",
+  "foot.privacy": "Πολιτική απορρήτου",
+  "foot.contact": "Επικοινωνία",
+  "foot.copy": "© 2026 PetDì. Φτιαγμένο με 🐾 για τα ζώα και τους ανθρώπους τους.",
+  "foot.note": "Δεν είναι ιατρική συσκευή. Μόνο για αποθήκευση δεδομένων."
+ },
+ "ja": {
+  "nav.features": "機能",
+  "nav.shots": "スクリーンショット",
+  "nav.privacy": "プライバシー",
+  "hero.eyebrow": "デジタルペット健康手帳",
+  "hero.h1": "愛犬・愛猫に<span class=\"tint\">ふさわしい</span>手帳。",
+  "hero.lead": "ワクチン、治療、検診、リマインダー——さらに複数のペット、カレンダー、グラフにも対応。ペットの健康を、いつもポケットに。",
+  "hero.badge_small": "ダウンロード：",
+  "hero.badge_big": "App Store",
+  "pitch.eyebrow": "紙にさよなら",
+  "pitch.h2": "紙の手帳は破れて色あせ、獣医に見せたいときに限って見つかりません。",
+  "pitch.p": "PetDìは、すべてのワクチン・治療・検診をひとつの場所に整理し、期限の<span class=\"tint\">前に</span>お知らせします。引き出しを探す必要はもうありません。",
+  "feat.eyebrow": "すべてをひとつに",
+  "feat.h2": "ペットの毎日のために",
+  "feat.p": "動物の健康を支える小さなことを、簡単に記録でき、忘れずにすみます。",
+  "f1.h": "充実した手帳",
+  "f1.p": "ワクチン、追加接種、駆虫、寄生虫予防、検診を、日付・ロット番号・メモとともに。",
+  "multipet.h": "複数のペット",
+  "multipet.p": "すべてのペットをひとつのアプリで管理。それぞれに専用の手帳：犬、猫、ウサギ、フェレットなど。",
+  "f2.h": "スマートなリマインダー",
+  "f2.p": "期限の前に自動でお知らせ。通知のタイミングと時刻を自由に設定でき、見逃しません。",
+  "calendar.h": "カレンダーとグラフ",
+  "calendar.p": "カレンダーでワクチンや検診を月ごとに。体重・体温の推移をインタラクティブに確認。",
+  "f3.h": "マイクロチップをすぐに",
+  "f3.p": "ペットのマイクロチップをQRコードとバーコードで。獣医や保護施設ですぐに提示。",
+  "f5.h": "かかりつけ獣医をいつも身近に",
+  "f5.p": "獣医や動物病院の連絡先を発信・地図とともに。種ごとの生理学的な基準値も。",
+  "f6.h": "徹底したプライバシー",
+  "f6.p": "すべてiPhone内に保存。アカウント不要、追跡なし、サーバーなし。ペットの手帳はあなただけのもの。",
+  "show.eyebrow": "もっと近くで",
+  "show.h2": "すっきり、静かで、真にネイティブ",
+  "show.p": "iOSになじむようデザイン——ライトとダーク、そして8言語対応。",
+  "priv.eyebrow": "あなたのプライバシー",
+  "priv.h2": "何もデバイスの外に出ません。",
+  "priv.p": "PetDìはデータを収集せず、登録も不要で、サーバーとも通信しません。あなたの情報がどう扱われるか——そして扱われないか——をご確認ください。",
+  "priv.btn": "プライバシーポリシーを読む →",
+  "foot.tagline": "愛犬・愛猫にふさわしい手帳——ワクチン、リマインダーなど、毎日を支えます。",
+  "foot.app": "アプリ",
+  "foot.features": "機能",
+  "foot.shots": "スクリーンショット",
+  "foot.privacy": "プライバシーポリシー",
+  "foot.contact": "お問い合わせ",
+  "foot.copy": "© 2026 PetDì. 🐾 を込めて、ペットとその家族のために。",
+  "foot.note": "医療機器ではありません。記録の保存のみを目的としています。"
+ },
+ "pt": {
+  "nav.features": "Funções",
+  "nav.shots": "Capturas",
+  "nav.privacy": "Privacidade",
+  "hero.eyebrow": "Caderneta de saúde digital",
+  "hero.h1": "A caderneta que o teu cão ou gato <span class=\"tint\">merece.</span>",
+  "hero.lead": "Vacinas, tratamentos, check-ups e lembretes — e agora vários animais, calendário e gráficos. Toda a saúde do teu animal, no bolso e organizada.",
+  "hero.badge_small": "Descarregar na",
+  "hero.badge_big": "App Store",
+  "pitch.eyebrow": "Adeus ao papel",
+  "pitch.h2": "A tua caderneta em papel está rasgada, desbotada e nunca aparece quando o veterinário pede.",
+  "pitch.p": "O PetDì junta cada vacina, tratamento e check-up num único lugar — e avisa-te <span class=\"tint\">antes</span> de algo expirar. Acabou vasculhar gavetas.",
+  "feat.eyebrow": "Tudo num só lugar",
+  "feat.h2": "Pensado para o dia a dia do teu animal",
+  "feat.p": "As pequenas coisas que mantêm um animal saudável, finalmente fáceis de registar e impossíveis de esquecer.",
+  "f1.h": "Caderneta completa",
+  "f1.p": "Vacinas, reforços, antiparasitários, desparasitações e check-ups, cada um com datas, lotes e notas.",
+  "multipet.h": "Vários animais",
+  "multipet.p": "Gere todos os teus animais numa só app, cada um com a sua caderneta: cão, gato, coelho, furão e mais.",
+  "f2.h": "Lembretes inteligentes",
+  "f2.p": "Avisos automáticos antes de cada prazo, com antecedência e hora personalizáveis — nunca mais te escapa nada.",
+  "calendar.h": "Calendário e gráficos",
+  "calendar.p": "Vacinas e check-ups mês a mês no calendário, com a evolução interativa do peso e da temperatura.",
+  "f3.h": "Microchip à mão",
+  "f3.p": "O microchip do teu animal em QR e código de barras, pronto a mostrar ao veterinário ou ao abrigo.",
+  "f5.h": "O teu veterinário, sempre perto",
+  "f5.p": "Contactos do veterinário e da clínica com chamada e mapa, além dos valores fisiológicos de referência para cada espécie.",
+  "f6.h": "Privado por natureza",
+  "f6.p": "Tudo fica no teu iPhone. Sem conta, sem rastreio, sem servidores. A caderneta do teu animal é só tua.",
+  "show.eyebrow": "Um olhar mais de perto",
+  "show.h2": "Limpa, serena e verdadeiramente nativa",
+  "show.p": "Concebida para se sentir em casa no iOS — em claro e escuro, e em 8 idiomas.",
+  "priv.eyebrow": "A tua privacidade",
+  "priv.h2": "Nada sai do teu dispositivo.",
+  "priv.p": "O PetDì não recolhe dados, não exige registo e não comunica com nenhum servidor. Vê como as tuas informações são tratadas — e como não são.",
+  "priv.btn": "Ler a política de privacidade →",
+  "foot.tagline": "A caderneta que o teu cão ou gato merece — vacinas, lembretes e mais, dia após dia.",
+  "foot.app": "App",
+  "foot.features": "Funções",
+  "foot.shots": "Capturas",
+  "foot.privacy": "Política de privacidade",
+  "foot.contact": "Contacto",
+  "foot.copy": "© 2026 PetDì. Feito com 🐾 para os animais e os seus humanos.",
+  "foot.note": "Não é um dispositivo médico. Apenas para guardar os dados."
+ }
 };
 function setLang(l){
   document.querySelectorAll('[data-i18n]').forEach(function(el){
@@ -221,7 +537,7 @@ function setLang(l){
     if(I18N[l] && I18N[l][k]!==undefined) el.innerHTML=I18N[l][k];
   });
   document.documentElement.lang=l;
-  document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.toggle('active', b.dataset.l===l);});
+  var sel=document.getElementById('langSel'); if(sel) sel.value=l;
   try{localStorage.setItem('petdi_lang',l);}catch(e){}
 }
 var SUN='<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.4" fill="#F5C518"/><g stroke="#F5C518" stroke-width="2" stroke-linecap="round"><path d="M12 2.6v2.1M12 19.3v2.1M4.7 4.7l1.5 1.5M17.8 17.8l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.7 19.3l1.5-1.5M17.8 6.2l1.5-1.5"/></g></svg>';

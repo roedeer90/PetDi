@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — PetDì</title>
+<title>Privacy — PetDì</title>
 <meta name="description" content="PetDì privacy policy: the app collects no data and stores everything locally on your device.">
 <link rel="icon" href="assets/icon-light.png">
 <script>try{var t=localStorage.getItem('petdi_theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}</script>
@@ -19,21 +19,40 @@
     <a class="brand" href="index.html"><img src="assets/icon-light.png" alt="PetDì icon">PetDì</a>
     <div class="nav-right">
       <nav class="nav-links">
-        <a href="index.html#features" data-i18n="nav.features">Features</a>
-        <a href="index.html#look" data-i18n="nav.shots">Screenshots</a>
+        <a href="index.html#features" data-i18n="nav.features">Funzioni</a>
+        <a href="index.html#look" data-i18n="nav.shots">Schermate</a>
       </nav>
       <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle light or dark theme"></button>
-      <div class="lang-switch"><button data-l="it" onclick="setLang('it')">IT</button><button data-l="en" onclick="setLang('en')">EN</button></div>
+      <select class="lang-select" id="langSel" onchange="setLang(this.value)" aria-label="Language"><option value="it">Italiano</option><option value="en">English</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="el">Ελληνικά</option><option value="ja">日本語</option><option value="pt">Português</option></select>
     </div>
   </div>
 </header>
 
 <main class="doc">
-  <a class="back" href="index.html" data-i18n="back">← Back to PetDì</a>
-  <h1 data-i18n="title">Privacy Policy</h1>
-  <div class="updated" data-i18n="updated">Last updated: July 2026</div>
+  <a class="back" href="index.html" id="backLink">← Torna a PetDì</a>
+  <h1 id="docTitle">Informativa Privacy</h1>
+  <div class="updated" id="docUpdated">Ultimo aggiornamento: luglio 2026</div>
 
-  <section id="en">
+  <section id="lang-it">
+    <p class="lead">In sintesi: PetDì non raccoglie, non trasmette e non condivide alcun dato personale. Tutte le informazioni restano sul tuo dispositivo.</p>
+    <p>PetDì (“l’app”) è sviluppata e fornita dal suo sviluppatore indipendente. La tua privacy è importante e questa informativa spiega, in modo semplice, come vengono trattati i dati quando usi l’app.</p>
+    <h2>1. Dati che inserisci</h2>
+    <p>Le informazioni che aggiungi (nome e dati dell’animale, vaccini, visite, peso, foto, contatti del veterinario, ecc.) vengono salvate esclusivamente in locale, sul tuo iPhone. Non vengono inviate a noi né a terze parti, e non sono accessibili allo sviluppatore.</p>
+    <h2>2. Nessuna raccolta dati</h2>
+    <p>L’app non utilizza account, non richiede registrazione, non contiene strumenti di analisi, non traccia la tua attività e non mostra pubblicità. Non raccogliamo identificativi, posizione o dati di utilizzo.</p>
+    <h2>3. Fotocamera e foto</h2>
+    <p>Se scegli di aggiungere una foto, l’app accede alla fotocamera o alla libreria foto solo per la foto che selezioni tu. L’immagine viene salvata unicamente sul dispositivo. L’app non accede al resto della tua libreria.</p>
+    <h2>4. Notifiche</h2>
+    <p>I promemoria delle scadenze sono notifiche locali, generate e mostrate dal tuo dispositivo. Non passano da alcun server.</p>
+    <h2>5. Backup</h2>
+    <p>I dati dell’app possono essere inclusi nei backup del dispositivo (iCloud o computer) che tu gestisci tramite le impostazioni di Apple. Tali backup sono soggetti alle condizioni e alla privacy di Apple, non dello sviluppatore.</p>
+    <h2>6. Minori</h2>
+    <p>L’app non è destinata alla raccolta di dati di minori, e in generale non raccoglie dati.</p>
+    <h2>7. Modifiche a questa informativa</h2>
+    <p>Eventuali modifiche saranno pubblicate su questa pagina, con aggiornamento della data in alto.</p>
+    <div class="contact"><h2 style="margin-top:0">8. Contatti</h2><p style="margin:0">Per domande su questa informativa puoi scrivere a <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p></div>
+  </section>
+  <section id="lang-en" class="hidden">
     <p class="lead">In short: PetDì does not collect, transmit or share any personal data. All information stays on your device.</p>
     <p>PetDì (“the app”) is developed and provided by its independent developer. Your privacy matters, and this policy explains, in plain language, how data is handled when you use the app.</p>
     <h2>1. Data you enter</h2>
@@ -50,72 +69,164 @@
     <p>The app is not intended to collect data from children, and in general collects no data.</p>
     <h2>7. Changes to this policy</h2>
     <p>Any changes will be posted on this page, with the date at the top updated accordingly.</p>
-    <div class="contact">
-      <h2 style="margin-top:0">8. Contact</h2>
-      <p style="margin:0">For questions about this policy, you can write to <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p>
-    </div>
+    <div class="contact"><h2 style="margin-top:0">8. Contact</h2><p style="margin:0">For questions about this policy, you can write to <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p></div>
   </section>
-
-  <section id="it" class="hidden">
-    <p class="lead">In sintesi: PetDì non raccoglie, non trasmette e non condivide alcun dato personale. Tutte le informazioni restano sul tuo dispositivo.</p>
-    <p>PetDì (“l’app”) è sviluppata e fornita dal suo sviluppatore indipendente. La tua privacy è importante e questa informativa spiega, in modo semplice, come vengono trattati i dati quando usi l’app.</p>
-    <h2>1. Dati che inserisci</h2>
-    <p>Le informazioni che aggiungi (nome e dati dell’animale, vaccini, visite, peso, foto, contatti del veterinario, ecc.) vengono salvate esclusivamente in locale, sul tuo iPhone. Non vengono inviate a noi né a terze parti, e non sono accessibili allo sviluppatore.</p>
-    <h2>2. Nessuna raccolta dati</h2>
-    <p>L’app non utilizza account, non richiede registrazione, non contiene strumenti di analisi (analytics), non traccia la tua attività e non mostra pubblicità. Non raccogliamo identificativi, posizione o dati di utilizzo.</p>
-    <h2>3. Fotocamera e foto</h2>
-    <p>Se scegli di aggiungere una foto, l’app accede alla fotocamera o alla libreria foto solo per la foto che selezioni tu. L’immagine viene salvata unicamente sul dispositivo. L’app non accede al resto della tua libreria.</p>
-    <h2>4. Notifiche</h2>
-    <p>I promemoria delle scadenze sono notifiche locali, generate e mostrate dal tuo dispositivo. Non passano da alcun server.</p>
-    <h2>5. Backup</h2>
-    <p>I dati dell’app possono essere inclusi nei backup del dispositivo (iCloud o computer) che tu gestisci tramite le impostazioni di Apple. Tali backup sono soggetti alle condizioni e alla privacy di Apple, non dello sviluppatore.</p>
-    <h2>6. Minori</h2>
-    <p>L’app non è destinata alla raccolta di dati di minori, e in generale non raccoglie dati.</p>
-    <h2>7. Modifiche a questa informativa</h2>
-    <p>Eventuali modifiche saranno pubblicate su questa pagina, con aggiornamento della data in alto.</p>
-    <div class="contact">
-      <h2 style="margin-top:0">8. Contatti</h2>
-      <p style="margin:0">Per domande su questa informativa puoi scrivere a <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p>
-    </div>
+  <section id="lang-fr" class="hidden">
+    <p class="lead">En bref : PetDì ne collecte, ne transmet et ne partage aucune donnée personnelle. Toutes les informations restent sur votre appareil.</p>
+    <p>PetDì (« l’app ») est développée et fournie par son développeur indépendant. Votre vie privée compte, et cette politique explique simplement comment les données sont traitées lorsque vous utilisez l’app.</p>
+    <h2>1. Données que vous saisissez</h2>
+    <p>Les informations que vous ajoutez (nom et données de l’animal, vaccins, visites, poids, photos, contacts du vétérinaire, etc.) sont enregistrées uniquement en local, sur votre iPhone. Elles ne nous sont jamais envoyées ni à des tiers, et ne sont pas accessibles au développeur.</p>
+    <h2>2. Aucune collecte de données</h2>
+    <p>L’app n’utilise aucun compte, ne demande aucune inscription, ne contient aucun outil d’analyse, ne suit pas votre activité et n’affiche aucune publicité. Nous ne collectons aucun identifiant, position ou donnée d’utilisation.</p>
+    <h2>3. Appareil photo et photos</h2>
+    <p>Si vous choisissez d’ajouter une photo, l’app accède à l’appareil photo ou à la photothèque uniquement pour la photo que vous sélectionnez. L’image est enregistrée uniquement sur l’appareil. L’app n’accède pas au reste de votre photothèque.</p>
+    <h2>4. Notifications</h2>
+    <p>Les rappels d’échéance sont des notifications locales, générées et affichées par votre appareil. Elles ne passent par aucun serveur.</p>
+    <h2>5. Sauvegardes</h2>
+    <p>Les données de l’app peuvent être incluses dans les sauvegardes de l’appareil (iCloud ou ordinateur) que vous gérez via les réglages d’Apple. Ces sauvegardes sont soumises aux conditions et à la confidentialité d’Apple, non du développeur.</p>
+    <h2>6. Mineurs</h2>
+    <p>L’app n’est pas destinée à collecter des données de mineurs, et de manière générale ne collecte aucune donnée.</p>
+    <h2>7. Modifications de cette politique</h2>
+    <p>Toute modification sera publiée sur cette page, avec mise à jour de la date en haut.</p>
+    <div class="contact"><h2 style="margin-top:0">8. Contact</h2><p style="margin:0">Pour toute question sur cette politique, vous pouvez écrire à <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p></div>
+  </section>
+  <section id="lang-de" class="hidden">
+    <p class="lead">Kurz gesagt: PetDì erhebt, überträgt und teilt keine personenbezogenen Daten. Alle Informationen bleiben auf deinem Gerät.</p>
+    <p>PetDì („die App“) wird von ihrem unabhängigen Entwickler entwickelt und bereitgestellt. Dein Datenschutz ist wichtig, und diese Erklärung beschreibt in einfacher Sprache, wie Daten bei der Nutzung der App behandelt werden.</p>
+    <h2>1. Daten, die du eingibst</h2>
+    <p>Die von dir hinzugefügten Informationen (Name und Daten des Tieres, Impfungen, Besuche, Gewicht, Fotos, Tierarzt-Kontakte usw.) werden ausschließlich lokal auf deinem iPhone gespeichert. Sie werden nie an uns oder Dritte gesendet und sind für den Entwickler nicht zugänglich.</p>
+    <h2>2. Keine Datenerhebung</h2>
+    <p>Die App nutzt keine Konten, erfordert keine Anmeldung, enthält keine Analyse-Tools, verfolgt deine Aktivität nicht und zeigt keine Werbung. Wir erheben keine Kennungen, Standort- oder Nutzungsdaten.</p>
+    <h2>3. Kamera und Fotos</h2>
+    <p>Wenn du ein Foto hinzufügen möchtest, greift die App nur für das von dir ausgewählte Foto auf Kamera oder Fotomediathek zu. Das Bild wird ausschließlich auf dem Gerät gespeichert. Die App greift nicht auf den Rest deiner Mediathek zu.</p>
+    <h2>4. Mitteilungen</h2>
+    <p>Fälligkeits-Erinnerungen sind lokale Mitteilungen, die von deinem Gerät erzeugt und angezeigt werden. Sie laufen über keinen Server.</p>
+    <h2>5. Backups</h2>
+    <p>App-Daten können in den Geräte-Backups (iCloud oder Computer) enthalten sein, die du über die Einstellungen von Apple verwaltest. Solche Backups unterliegen den Bedingungen und dem Datenschutz von Apple, nicht des Entwicklers.</p>
+    <h2>6. Kinder</h2>
+    <p>Die App ist nicht darauf ausgelegt, Daten von Kindern zu erheben, und erhebt generell keine Daten.</p>
+    <h2>7. Änderungen dieser Erklärung</h2>
+    <p>Etwaige Änderungen werden auf dieser Seite veröffentlicht, mit entsprechender Aktualisierung des Datums oben.</p>
+    <div class="contact"><h2 style="margin-top:0">8. Kontakt</h2><p style="margin:0">Bei Fragen zu dieser Erklärung kannst du schreiben an <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p></div>
+  </section>
+  <section id="lang-es" class="hidden">
+    <p class="lead">En resumen: PetDì no recopila, transmite ni comparte ningún dato personal. Toda la información permanece en tu dispositivo.</p>
+    <p>PetDì (“la app”) es desarrollada y ofrecida por su desarrollador independiente. Tu privacidad importa, y esta política explica, en lenguaje sencillo, cómo se tratan los datos cuando usas la app.</p>
+    <h2>1. Datos que introduces</h2>
+    <p>La información que añades (nombre y datos de la mascota, vacunas, visitas, peso, fotos, contactos del veterinario, etc.) se guarda únicamente en local, en tu iPhone. Nunca se nos envía ni a terceros, y el desarrollador no puede acceder a ella.</p>
+    <h2>2. Sin recopilación de datos</h2>
+    <p>La app no usa cuentas, no requiere registro, no contiene herramientas de analítica, no rastrea tu actividad y no muestra publicidad. No recopilamos identificadores, ubicación ni datos de uso.</p>
+    <h2>3. Cámara y fotos</h2>
+    <p>Si eliges añadir una foto, la app accede a la cámara o a la fototeca solo para la foto que seleccionas. La imagen se guarda únicamente en el dispositivo. La app no accede al resto de tu fototeca.</p>
+    <h2>4. Notificaciones</h2>
+    <p>Los recordatorios de vencimientos son notificaciones locales, generadas y mostradas por tu dispositivo. No pasan por ningún servidor.</p>
+    <h2>5. Copias de seguridad</h2>
+    <p>Los datos de la app pueden incluirse en las copias de seguridad del dispositivo (iCloud u ordenador) que tú gestionas mediante los ajustes de Apple. Dichas copias están sujetas a las condiciones y privacidad de Apple, no del desarrollador.</p>
+    <h2>6. Menores</h2>
+    <p>La app no está destinada a recopilar datos de menores y, en general, no recopila datos.</p>
+    <h2>7. Cambios en esta política</h2>
+    <p>Cualquier cambio se publicará en esta página, actualizando la fecha de la parte superior.</p>
+    <div class="contact"><h2 style="margin-top:0">8. Contacto</h2><p style="margin:0">Para preguntas sobre esta política, puedes escribir a <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p></div>
+  </section>
+  <section id="lang-el" class="hidden">
+    <p class="lead">Με λίγα λόγια: το PetDì δεν συλλέγει, δεν μεταδίδει και δεν κοινοποιεί κανένα προσωπικό δεδομένο. Όλες οι πληροφορίες παραμένουν στη συσκευή σου.</p>
+    <p>Το PetDì (“η εφαρμογή”) αναπτύσσεται και παρέχεται από τον ανεξάρτητο προγραμματιστή της. Το απόρρητό σου έχει σημασία, και αυτή η πολιτική εξηγεί, με απλά λόγια, πώς αντιμετωπίζονται τα δεδομένα όταν χρησιμοποιείς την εφαρμογή.</p>
+    <h2>1. Δεδομένα που καταχωρείς</h2>
+    <p>Οι πληροφορίες που προσθέτεις (όνομα και στοιχεία του ζώου, εμβόλια, επισκέψεις, βάρος, φωτογραφίες, στοιχεία κτηνιάτρου κ.λπ.) αποθηκεύονται αποκλειστικά τοπικά, στο iPhone σου. Δεν αποστέλλονται ποτέ σε εμάς ή σε τρίτους, και δεν είναι προσβάσιμες στον προγραμματιστή.</p>
+    <h2>2. Καμία συλλογή δεδομένων</h2>
+    <p>Η εφαρμογή δεν χρησιμοποιεί λογαριασμούς, δεν απαιτεί εγγραφή, δεν περιέχει εργαλεία ανάλυσης, δεν παρακολουθεί τη δραστηριότητά σου και δεν εμφανίζει διαφημίσεις. Δεν συλλέγουμε αναγνωριστικά, τοποθεσία ή δεδομένα χρήσης.</p>
+    <h2>3. Κάμερα και φωτογραφίες</h2>
+    <p>Αν επιλέξεις να προσθέσεις φωτογραφία, η εφαρμογή έχει πρόσβαση στην κάμερα ή στη βιβλιοθήκη φωτογραφιών μόνο για τη φωτογραφία που επιλέγεις. Η εικόνα αποθηκεύεται μόνο στη συσκευή. Η εφαρμογή δεν έχει πρόσβαση στην υπόλοιπη βιβλιοθήκη σου.</p>
+    <h2>4. Ειδοποιήσεις</h2>
+    <p>Οι υπενθυμίσεις λήξεων είναι τοπικές ειδοποιήσεις, που δημιουργούνται και εμφανίζονται από τη συσκευή σου. Δεν περνούν από κανέναν διακομιστή.</p>
+    <h2>5. Αντίγραφα ασφαλείας</h2>
+    <p>Τα δεδομένα της εφαρμογής μπορεί να περιλαμβάνονται στα αντίγραφα ασφαλείας της συσκευής (iCloud ή υπολογιστής) που διαχειρίζεσαι μέσω των ρυθμίσεων της Apple. Τα αντίγραφα αυτά υπόκεινται στους όρους και το απόρρητο της Apple, όχι του προγραμματιστή.</p>
+    <h2>6. Ανήλικοι</h2>
+    <p>Η εφαρμογή δεν προορίζεται για συλλογή δεδομένων ανηλίκων και, γενικά, δεν συλλέγει δεδομένα.</p>
+    <h2>7. Αλλαγές σε αυτήν την πολιτική</h2>
+    <p>Τυχόν αλλαγές θα δημοσιεύονται σε αυτήν τη σελίδα, με ενημέρωση της ημερομηνίας στην κορυφή.</p>
+    <div class="contact"><h2 style="margin-top:0">8. Επικοινωνία</h2><p style="margin:0">Για ερωτήσεις σχετικά με αυτήν την πολιτική, μπορείς να γράψεις στο <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p></div>
+  </section>
+  <section id="lang-ja" class="hidden">
+    <p class="lead">要するに：PetDìは個人データを収集・送信・共有しません。すべての情報はあなたのデバイス内に留まります。</p>
+    <p>PetDì（「本アプリ」）は、独立した開発者によって開発・提供されています。あなたのプライバシーを大切にし、本ポリシーでは本アプリ利用時のデータの取り扱いをわかりやすく説明します。</p>
+    <h2>1. あなたが入力するデータ</h2>
+    <p>あなたが追加する情報（ペットの名前や詳細、ワクチン、通院、体重、写真、獣医の連絡先など）は、あなたのiPhone内にのみローカルで保存されます。当方や第三者に送信されることはなく、開発者もアクセスできません。</p>
+    <h2>2. データを収集しません</h2>
+    <p>本アプリはアカウントを使用せず、登録も不要で、解析ツールを含まず、あなたの行動を追跡せず、広告も表示しません。識別子・位置情報・利用データは一切収集しません。</p>
+    <h2>3. カメラと写真</h2>
+    <p>写真を追加する場合、本アプリはあなたが選択した写真のためだけにカメラまたは写真ライブラリにアクセスします。画像はデバイス内にのみ保存されます。ライブラリの他の部分にはアクセスしません。</p>
+    <h2>4. 通知</h2>
+    <p>期限のリマインダーは、あなたのデバイスが生成・表示するローカル通知です。いかなるサーバーも経由しません。</p>
+    <h2>5. バックアップ</h2>
+    <p>本アプリのデータは、Appleの設定で管理するデバイスのバックアップ（iCloudまたはコンピュータ）に含まれる場合があります。これらのバックアップは、開発者ではなくAppleの規約とプライバシーに従います。</p>
+    <h2>6. 未成年者</h2>
+    <p>本アプリは未成年者のデータ収集を目的としておらず、一般にデータを収集しません。</p>
+    <h2>7. 本ポリシーの変更</h2>
+    <p>変更があった場合は、上部の日付を更新のうえ、本ページに掲載します。</p>
+    <div class="contact"><h2 style="margin-top:0">8. お問い合わせ</h2><p style="margin:0">本ポリシーに関するご質問は、次のアドレスまでご連絡ください： <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p></div>
+  </section>
+  <section id="lang-pt" class="hidden">
+    <p class="lead">Em resumo: o PetDì não recolhe, não transmite e não partilha quaisquer dados pessoais. Todas as informações permanecem no teu dispositivo.</p>
+    <p>O PetDì (“a app”) é desenvolvido e disponibilizado pelo seu programador independente. A tua privacidade é importante, e esta política explica, de forma simples, como os dados são tratados quando usas a app.</p>
+    <h2>1. Dados que introduzes</h2>
+    <p>As informações que adicionas (nome e dados do animal, vacinas, visitas, peso, fotos, contactos do veterinário, etc.) são guardadas exclusivamente em local, no teu iPhone. Nunca são enviadas para nós nem para terceiros, e não são acessíveis ao programador.</p>
+    <h2>2. Sem recolha de dados</h2>
+    <p>A app não usa contas, não exige registo, não contém ferramentas de análise, não rastreia a tua atividade e não mostra publicidade. Não recolhemos identificadores, localização ou dados de utilização.</p>
+    <h2>3. Câmara e fotos</h2>
+    <p>Se optares por adicionar uma foto, a app acede à câmara ou à biblioteca de fotos apenas para a foto que selecionas. A imagem é guardada unicamente no dispositivo. A app não acede ao resto da tua biblioteca.</p>
+    <h2>4. Notificações</h2>
+    <p>Os lembretes de prazos são notificações locais, geradas e mostradas pelo teu dispositivo. Não passam por nenhum servidor.</p>
+    <h2>5. Cópias de segurança</h2>
+    <p>Os dados da app podem ser incluídos nas cópias de segurança do dispositivo (iCloud ou computador) que geres através das definições da Apple. Essas cópias estão sujeitas aos termos e à privacidade da Apple, não do programador.</p>
+    <h2>6. Menores</h2>
+    <p>A app não se destina à recolha de dados de menores e, em geral, não recolhe dados.</p>
+    <h2>7. Alterações a esta política</h2>
+    <p>Quaisquer alterações serão publicadas nesta página, com atualização da data no topo.</p>
+    <div class="contact"><h2 style="margin-top:0">8. Contacto</h2><p style="margin:0">Para questões sobre esta política, podes escrever para <a href="mailto:hello@petdi.app" style="color:var(--teal-deep);font-weight:600">hello@petdi.app</a>.</p></div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
     <div class="copyright" style="border:0;margin:0;padding:0">
-      <span data-i18n="foot.copy">© 2026 PetDì. Made with 🐾 for pets and their humans.</span>
+      <span id="footCopy">© 2026 PetDì.</span>
       <a href="index.html" style="color:var(--ink-soft);font-weight:600">petdi.app</a>
     </div>
   </div>
 </footer>
 
 <script>
-var I18N={
-  en:{"nav.features":"Features","nav.shots":"Screenshots","back":"← Back to PetDì","title":"Privacy Policy","updated":"Last updated: July 2026","foot.copy":"© 2026 PetDì. Made with 🐾 for pets and their humans."},
-  it:{"nav.features":"Funzioni","nav.shots":"Schermate","back":"← Torna a PetDì","title":"Informativa Privacy","updated":"Ultimo aggiornamento: luglio 2026","foot.copy":"© 2026 PetDì. Fatto con 🐾 per gli animali e i loro umani."}
-};
+var LANGS = ["it", "en", "fr", "de", "es", "el", "ja", "pt"];
+var BACK = ["← Torna a PetDì", "← Back to PetDì", "← Retour à PetDì", "← Zurück zu PetDì", "← Volver a PetDì", "← Πίσω στο PetDì", "← PetDìに戻る", "← Voltar ao PetDì"];
+var TITLE = ["Informativa Privacy", "Privacy Policy", "Politique de confidentialité", "Datenschutzerklärung", "Política de privacidad", "Πολιτική Απορρήτου", "プライバシーポリシー", "Política de Privacidade"];
+var UPDATED = ["Ultimo aggiornamento: luglio 2026", "Last updated: July 2026", "Dernière mise à jour : juillet 2026", "Zuletzt aktualisiert: Juli 2026", "Última actualización: julio de 2026", "Τελευταία ενημέρωση: Ιούλιος 2026", "最終更新：2026年7月", "Última atualização: julho de 2026"];
+var COPY = ["© 2026 PetDì. Fatto con 🐾 per gli animali e i loro umani.", "© 2026 PetDì. Made with 🐾 for pets and their humans.", "© 2026 PetDì. Fait avec 🐾 pour les animaux et leurs humains.", "© 2026 PetDì. Mit 🐾 gemacht für Tiere und ihre Menschen.", "© 2026 PetDì. Hecho con 🐾 para las mascotas y sus humanos.", "© 2026 PetDì. Φτιαγμένο με 🐾 για τα ζώα και τους ανθρώπους τους.", "© 2026 PetDì. 🐾 を込めて、ペットとその家族のために。", "© 2026 PetDì. Feito com 🐾 para os animais e os seus humanos."];
+var NAVF = ["Funzioni", "Features", "Fonctions", "Funktionen", "Funciones", "Λειτουργίες", "機能", "Funções"];
+var NAVS = ["Schermate", "Screenshots", "Captures", "Screenshots", "Capturas", "Στιγμιότυπα", "スクリーンショット", "Capturas"];
 function setLang(l){
-  document.getElementById('en').classList.toggle('hidden', l!=='en');
-  document.getElementById('it').classList.toggle('hidden', l!=='it');
-  document.querySelectorAll('[data-i18n]').forEach(function(el){
-    var k=el.getAttribute('data-i18n');
-    if(I18N[l] && I18N[l][k]!==undefined) el.innerHTML=I18N[l][k];
+  var idx = LANGS.indexOf(l); if(idx<0){l='en'; idx=1;}
+  LANGS.forEach(function(code){
+    var s=document.getElementById('lang-'+code);
+    if(s) s.classList.toggle('hidden', code!==l);
   });
+  document.getElementById('backLink').textContent = BACK[idx];
+  document.getElementById('docTitle').textContent = TITLE[idx];
+  document.getElementById('docUpdated').textContent = UPDATED[idx];
+  document.getElementById('footCopy').textContent = COPY[idx];
+  var nf=document.querySelector('[data-i18n="nav.features"]'); if(nf) nf.textContent=NAVF[idx];
+  var ns=document.querySelector('[data-i18n="nav.shots"]'); if(ns) ns.textContent=NAVS[idx];
   document.documentElement.lang=l;
-  document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.toggle('active', b.dataset.l===l);});
+  var sel=document.getElementById('langSel'); if(sel) sel.value=l;
   try{localStorage.setItem('petdi_lang',l);}catch(e){}
 }
 var SUN='<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.4" fill="#F5C518"/><g stroke="#F5C518" stroke-width="2" stroke-linecap="round"><path d="M12 2.6v2.1M12 19.3v2.1M4.7 4.7l1.5 1.5M17.8 17.8l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.7 19.3l1.5-1.5M17.8 6.2l1.5-1.5"/></g></svg>';
 var MOON='<svg viewBox="0 0 24 24" fill="#8B5CF6"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
-function applyTheme(t){
-  document.documentElement.classList.toggle('dark', t==='dark');
-  var btn=document.getElementById('themeBtn'); if(btn) btn.innerHTML=(t==='dark')?SUN:MOON;
-  try{localStorage.setItem('petdi_theme',t);}catch(e){}
-}
-function toggleTheme(){ applyTheme(document.documentElement.classList.contains('dark')?'light':'dark'); }
+function applyTheme(t){document.documentElement.classList.toggle('dark', t==='dark');var b=document.getElementById('themeBtn');if(b)b.innerHTML=(t==='dark')?SUN:MOON;try{localStorage.setItem('petdi_theme',t);}catch(e){}}
+function toggleTheme(){applyTheme(document.documentElement.classList.contains('dark')?'light':'dark');}
 (function(){
   var l=null; try{l=localStorage.getItem('petdi_lang');}catch(e){}
-  if(!l) l=(navigator.language||'en').toLowerCase().indexOf('it')===0?'it':'en';
+  if(!l){ var n=(navigator.language||'en').slice(0,2).toLowerCase(); l = LANGS.indexOf(n)>=0 ? n : 'en'; }
   setLang(l);
   var t=null; try{t=localStorage.getItem('petdi_theme');}catch(e){}
   if(!t) t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
